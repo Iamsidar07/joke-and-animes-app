@@ -13,25 +13,18 @@ const Navbar = () => {
   ];
   let [open, setOpen] = useState(false);
   return (
-    <div className="md:h-20 text-white bg-transparent shadow-sm z-[10]  w-full ">
-      <div className="md:flex  items-center justify-between  py-4 md:px-10 px-7">
+    <div className="md:h-20 text-white bg-transparent shadow-sm z-[10]  w-full p-2 ">
+      <div className="flex  items-center justify-between   md:px-10 ">
         <Link href={"/"}>
-          <div
-            className="text-6xl font-serif justify-center font-bold my-auto group cursor-pointer flex items-center 
-"
-          >
-            M
+          <div className="text-4xl p-2  font-serif justify-center font-bold my-auto group cursor-pointer flex items-center animate-pulse md:animate-spin">
+            ⚡
           </div>
         </Link>
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+          className="text-2xl absolute right-6 top-6 cursor-pointer md:hidden"
         >
-          {open ? (
-            <XIcon className="block h-6 w-6" aria-hidden="true" />
-          ) : (
-            <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-          )}
+          {open ? "❎" : "🧱"}
         </div>
 
         <ul
@@ -45,33 +38,20 @@ const Navbar = () => {
               className="md:ml-1 group whitespace-nowrap text-sm md:my-0 text-left p-3 rounded-md md:hover:bg-[#1e293b]"
             >
               <Link href={link.link}>
-                <a className="text-white md:text-white  hover:text-gray-400 duration-500 ">
+                <a className="text-white md:text-white  md:hover:text-gray-400 duration-500 ">
                   {link.name}
                 </a>
               </Link>
-              <small className="hidden md:inline-block opacity-0 group-hover:opacity-100 group-hover:animate-bounce">
+              <small className="hidden md:inline-block opacity-0 md:group-hover:opacity-100 md:group-hover:animate-bounce">
                 {link.icon}
               </small>
             </li>
           ))}
-          <Button>
+          <button className="bg-blue-500 px-4 py-2 md:py-3 mt-4 md:mt-0 rounded-full animate-bounce md:animate-none font-bold">
             <Link href={"https://twitter.com/iamsidar07"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                />
-              </svg>
+              follow🕊️
             </Link>
-          </Button>
+          </button>
         </ul>
       </div>
     </div>

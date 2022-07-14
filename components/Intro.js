@@ -1,33 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-const Intro = ({
-  pic,
-  title,
-  paragraph,
-  isLeft,
-  url,
-  category,
-  isBtn,
-}) => {
+const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
   return (
     <div
       className={
         isLeft
-          ? " max-w-sm  md:max-w-6xl mx-auto md:px-10 bg-[#1e293b] flex-col-reverse overflow-auto  md:flex-row-reverse md:min-h-screen my-1 group  flex items-center   justify-between rounded-xl"
-          : " max-w-sm  md:max-w-6xl mx-auto md:px-10 bg-[#1e293b] flex-col-reverse my-10 overflow-auto  group md:min-h-screen  md:flex-row flex items-center  justify-between rounded-xl"
+          ? " max-w-sm  md:max-w-6xl mx-auto md:px-10 bg-[#1e293b6c] shadow-sm md:shadow-2xl shadow-[#1e293b87]  flex-col-reverse overflow-auto  md:flex-row-reverse md:min-h-screen my-1 group  flex items-center   justify-between rounded md:rounded-xl"
+          : " max-w-sm  md:max-w-6xl mx-auto md:px-10 bg-[#1e293b6c] shadow-sm md:shadow-2xl shadow-[#1e293b87] flex-col-reverse my-8 overflow-auto  group md:min-h-screen  md:flex-row flex items-center  justify-between rounded md:rounded-xl"
       }
     >
       <div className=" text-white  flex flex-col items-center justify-start  md:w-[55%]   group  space-y-2 p-5">
         <div className=" space-y-3 ">
-          <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-700 to-green-600  md:text-6xl font-bold  transition-colors duration-100 ease-in">
+          <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-700 to-green-600  md:text-6xl font-extrabold  transition-colors duration-100 ease-in">
             {title}
           </h1>
-          <p className="lowercase text-base md:text-xl">
-            {paragraph}
-          </p>
+          <p className="lowercase text-base md:text-xl">{paragraph}</p>
           {isBtn && (
-            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded  bg-[#334155]  md:hover:scale-105 transition-all duration-100 ease-in  hover:bg-[#334155eb] text-white  py-3 px-6  md:inline-flex items-center">
+            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full font-bold bg-orange-600   transition-all duration-100 ease-in  md:hover:bg-orange-500 text-white  py-3 px-6  md:inline-flex items-center">
               <Link href={url}>
                 <a>
                   <svg
@@ -56,7 +46,7 @@ const Intro = ({
           )}
         </div>
       </div>
-      <div className=" p-2 overflow-auto w-full h-64  relative max-w-[384px] md:w-96 md:h-96 md:block   z-[1]">
+      <div className=" p-2 overflow-auto w-full h-72  relative max-w-[384px] md:w-96 md:h-96 md:block   z-[1]">
         <Image
           src={pic.url}
           layout="fill"
@@ -64,7 +54,7 @@ const Intro = ({
           objectFit="cover"
           placeholder="blur"
           blurDataURL={pic.url}
-          className=" group-hover:scale-150 rounded-md transition-all duration-200 overflow-auto p-5 bg-black "
+          className=" md:group-hover:scale-150 rounded transition-all duration-200 overflow-auto p-5 bg-black "
         />
       </div>
     </div>

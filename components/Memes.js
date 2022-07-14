@@ -4,7 +4,7 @@ import { Fade } from 'react-reveal';
 const Memes = ({memes}) => {
 
   let topMemes=[];
-  for (let index = 0; index < 30; index++) {
+  for (let index = 0; index < 50; index++) {
     const element = memes[index];
     topMemes.push(element) 
   }
@@ -23,7 +23,7 @@ const Memes = ({memes}) => {
                 alt={id}
                 placeholder='blur'
                 blurDataURL={url}
-                className=" md:group-hover:scale-125 transition-all ease-in duration-200"
+                className="rounded md:group-hover:scale-125 transition-all ease-in duration-200"
             />
         </div>
 
