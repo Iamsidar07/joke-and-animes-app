@@ -43,7 +43,7 @@ const Meme = ({ meme }) => {
   console.log(memes);
 
   return (
-    <div className="max-w-sm md:py-10  md:max-w-6xl mx-auto">
+    <div className="p-2 max-w-sm md:py-10  md:max-w-6xl mx-auto">
       <Fade bottom>
         <Search
           funCall={getMemes}

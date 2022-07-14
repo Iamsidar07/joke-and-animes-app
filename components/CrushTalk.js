@@ -29,7 +29,7 @@ const CrushTalk = () => {
   };
   return (
     <div>
-      <div className="px-3 py-1 md:p-3 md:h-72 text-white block  items-center justify-start   mx-auto  rounded-lg shadow-xl  bg-[#1e293b]  w-full">
+      <div className="px-2 py-1 md:p-3 md:h-72 text-white block  items-center justify-start   mx-auto  rounded-lg shadow-xl  bg-[#1e293b]  w-full">
       <h1 className="  text-transparent   bg-clip-text bg-gradient-to-r from-purple-700 to-black text-3xl md:text-6xl font-bold  transition-colors duration-100 ease-in">Crush Talk❤️</h1>
         <form onSubmit={talkToLove} className="p-3">
           <div className="form-group ">
