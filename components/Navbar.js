@@ -47,7 +47,7 @@ const Navbar = () => {
               </small>
             </li>
           ))}
-          <button className="bg-blue-500 px-4 py-2 md:py-3 mt-4 md:mt-0 rounded-full animate-bounce md:animate-none font-bold">
+          <button className="bg-blue-500 px-4 py-2 md:py-3 md:ml-2 mt-4 md:mt-0 rounded-full animate-bounce md:animate-none font-bold">
             <Link href={"https://twitter.com/iamsidar07"}>
               follow🕊️
             </Link>
