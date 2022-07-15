@@ -6,13 +6,13 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
     <div
       className={
         isLeft
-          ? " max-w-sm  md:max-w-6xl mx-auto md:px-10 bg-[#1e293b6c] shadow-sm md:shadow-2xl shadow-[#1e293b87]  flex-col-reverse overflow-auto  md:flex-row-reverse md:min-h-screen my-1 group  flex items-center   justify-between rounded md:rounded-xl"
-          : " max-w-sm  md:max-w-6xl mx-auto md:px-10 bg-[#1e293b6c] shadow-sm md:shadow-2xl shadow-[#1e293b87] flex-col-reverse my-8 overflow-auto  group md:min-h-screen  md:flex-row flex items-center  justify-between rounded md:rounded-xl"
+          ? " max-w-sm  md:max-w-6xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse md:min-h-[460px]  my-12 group  flex items-center   justify-between rounded md:rounded-xl"
+          : " max-w-sm  md:max-w-6xl mx-auto md:px-10  flex-col-reverse my-12 overflow-auto  md:min-h-[460px]  md:flex-row flex items-center  justify-between rounded md:rounded-xl"
       }
     >
-      <div className=" text-white  flex flex-col items-center justify-start  md:w-[55%]   group  space-y-2 p-5">
+      <div className=" text-white  flex flex-col items-center justify-start  md:w-[55%]     space-y-2 py-5">
         <div className=" space-y-3 ">
-          <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-700 to-green-600  md:text-6xl font-extrabold  transition-colors duration-100 ease-in">
+          <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-800 to-pink-600 md:text-6xl font-extrabold  transition-colors duration-100 ease-in">
             {title}
           </h1>
           <p className="lowercase text-base md:text-xl">{paragraph}</p>
@@ -46,7 +46,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           )}
         </div>
       </div>
-      <div className=" p-2 overflow-auto w-full h-72  relative max-w-[384px] md:w-96 md:h-96 md:block   z-[1]">
+      <div className="shadow-md shadow-gray-800 py-2 overflow-auto w-full h-72  relative max-w-[384px] md:w-96 md:h-96 md:block   z-[1]">
         <Image
           src={pic.url}
           layout="fill"
@@ -54,7 +54,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           objectFit="cover"
           placeholder="blur"
           blurDataURL={pic.url}
-          className=" md:group-hover:scale-150 rounded transition-all duration-200 overflow-auto p-5 bg-black "
+          className=" md:hover:scale-150 rounded transition-all duration-200 overflow-auto py-5 bg-black "
         />
       </div>
     </div>

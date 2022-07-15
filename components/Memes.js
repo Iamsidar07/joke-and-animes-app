@@ -20,7 +20,7 @@ const Memes = ({memes}) => {
                 src={url}
                 layout="fill"
                 objectFit='cover'
-                alt={id}
+                alt={name}
                 placeholder='blur'
                 blurDataURL={url}
                 className="rounded md:group-hover:scale-125 transition-all ease-in duration-200"
