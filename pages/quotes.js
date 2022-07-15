@@ -44,7 +44,7 @@ const Quotes = ({ kill, quotes }) => {
   }, []);
 
   return (
-    <div className="p-2 bg-[#0f172a] max-w-md md:max-w-6xl  md:py-10  mx-auto">
+    <div className="p-3 bg-[#0f172a] max-w-md md:max-w-6xl  md:py-10  mx-auto">
       <Fade bottom>
       <Search
         funCall={getQuotes}
