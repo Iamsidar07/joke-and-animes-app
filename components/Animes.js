@@ -4,7 +4,7 @@ import { Fade } from "react-reveal";
 const Animes = ({ animes }) => {
   const [load, setLoad] = useState(true);
   return (
-    <div className="p-3 w-full grid grid-cols-1 md:grid-cols-3  ">
+    <div className="p-1 w-full grid grid-cols-1 md:grid-cols-3  ">
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
         return (
           <Fade bottom key={image_id}>
