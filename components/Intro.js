@@ -54,6 +54,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           objectFit="cover"
           placeholder="blur"
           blurDataURL={pic.url}
+          priority
           className=" md:hover:scale-150 rounded transition-all duration-200 overflow-auto py-5 bg-black "
         />
       </div>

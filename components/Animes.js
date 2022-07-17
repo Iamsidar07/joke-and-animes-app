@@ -22,6 +22,7 @@ const Animes = ({ animes }) => {
                 alt={image_id}
                 placeholder="blur"
                 blurDataURL={url}
+                priority
                 onLoadingComplete={() => setLoad(false)}
               />
               <div className="cursor-pointer px-6 py-3">

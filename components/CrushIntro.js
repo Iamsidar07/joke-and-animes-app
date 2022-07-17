@@ -18,6 +18,7 @@ const CrushIntro = ({loading,pic,setLoading,isLeft}) => {
           placeholder='blur'
           blurDataURL={pic?.url}
           onLoadingComplete={()=>setLoading(true)}
+          priority
           className="rounded-xl md:group-hover:scale-150 transition-all duration-200 "
         />
         </div>

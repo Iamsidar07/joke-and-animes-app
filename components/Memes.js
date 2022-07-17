@@ -23,6 +23,7 @@ const Memes = ({memes}) => {
                 alt={name}
                 placeholder='blur'
                 blurDataURL={url}
+                priority
                 className="rounded md:group-hover:scale-125 transition-all ease-in duration-200"
             />
         </div>
