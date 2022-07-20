@@ -35,7 +35,7 @@ const Search = ({ funCall, keywords, setKeywords }) => {
           <input
             type="search"
             id="default-search"
-            className="block p-4 pl-10 w-full text-sm bg-gray-900 text-gray-50 rounded-lg border-none    dark:bg-gray-700 dark:border-gray-600 "
+            className="block p-4 pl-10 w-full text-sm bg-gray-900 text-gray-50 rounded-lg border-none    dark:bg-gray-700  "
             placeholder="Search keywords..."
             required=""
             value={keywords}

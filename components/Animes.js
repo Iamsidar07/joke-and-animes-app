@@ -8,7 +8,7 @@ const Animes = ({ animes }) => {
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
         return (
           <Fade bottom key={image_id}>
-            <div className=" mx-auto h-fit  md:w-auto w-full bg-[#1e293b] text-white  my-2 md:m-3  group   rounded overflow-hidden shadow-md md:hover:shadow-lg">
+            <div className=" mx-auto h-fit md:h-auto  md:w-auto w-full bg-[#1e293b] text-white  my-2 md:m-3  group   rounded overflow-hidden shadow-md md:hover:shadow-lg">
               <Image
                 className={
                   typeof url == undefined
@@ -21,6 +21,7 @@ const Animes = ({ animes }) => {
                 height={height}
                 alt={image_id}
                 placeholder="blur"
+                objectFit="contain"
                 blurDataURL={url}
                 priority
                 onLoadingComplete={() => setLoad(false)}

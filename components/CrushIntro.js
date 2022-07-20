@@ -9,7 +9,7 @@ const CrushIntro = ({loading,pic,setLoading,isLeft}) => {
         
         <CrushTalk/>
         </div>
-        <div className="hidden  rounded-md relative max-w-[384px] w-96  h-96 md:block">
+        <div className="hidden rounded-md relative max-w-[384px] w-96  h-96 md:block">
         <Image
           src={pic?.url}
           layout="fill"
@@ -19,7 +19,7 @@ const CrushIntro = ({loading,pic,setLoading,isLeft}) => {
           blurDataURL={pic?.url}
           onLoadingComplete={()=>setLoading(true)}
           priority
-          className="rounded-xl md:group-hover:scale-150 transition-all duration-200 "
+          className="rounded-md  md:group-hover:scale-105  transition-all duration-200 "
         />
         </div>
       </div>
