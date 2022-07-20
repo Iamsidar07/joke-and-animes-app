@@ -6,11 +6,11 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
     <div
       className={
         isLeft
-          ? " max-w-sm  md:max-w-6xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse md:min-h-[460px]  my-12 group  flex items-center   justify-between rounded md:rounded-xl"
-          : " max-w-sm  md:max-w-6xl mx-auto md:px-10  flex-col-reverse my-12 overflow-auto  md:min-h-[460px]  md:flex-row flex items-center  justify-between rounded md:rounded-xl"
+          ? " max-w-sm bg-black/20 md:max-w-6xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse md:min-h-[460px]  my-12 group  flex items-center   justify-between rounded md:rounded-xl"
+          : " max-w-sm bg-black/20 md:max-w-6xl mx-auto md:px-10  flex-col-reverse my-12 overflow-auto  md:min-h-[460px]  md:flex-row flex items-center  justify-between rounded md:rounded-xl"
       }
     >
-      <div className=" text-white  flex flex-col items-center justify-start  md:w-[55%]     space-y-2 py-5">
+      <div className=" text-white p-3  flex flex-col items-center justify-start  md:w-[60%]     space-y-2 py-5">
         <div className=" space-y-3 ">
           <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-800 to-pink-600 md:text-6xl font-extrabold  transition-colors duration-100 ease-in">
             {title}
@@ -55,7 +55,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           placeholder="blur"
           blurDataURL={pic.url}
           priority
-          className=" md:hover:scale-150 rounded transition-all duration-200 overflow-auto py-5 bg-black "
+          className=" md:hover:scale-150 rounded transition-all duration-200 overflow-auto py-5"
         />
       </div>
     </div>

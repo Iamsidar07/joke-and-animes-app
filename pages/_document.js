@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html style={{background:"url('animated-shape.svg')"}}>
       <Head>
       <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
