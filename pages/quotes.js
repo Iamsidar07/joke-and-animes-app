@@ -61,6 +61,7 @@ const Quotes = ({ kill, quotes }) => {
         url="/quotes"
         category={"Quotes"}
         isBtn={false}
+        bg={"#FFDEDE"}
       />
       </Fade>
       {quotesData.length != 0 && <Quote quotes={quotesData} />}

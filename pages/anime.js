@@ -64,6 +64,7 @@ const Anime = ({ smile }) => {
         url="/anime"
         category={"Anime's"}
         isBtn={false}
+        bg="#59CE8F"
       />
       </Fade>
      

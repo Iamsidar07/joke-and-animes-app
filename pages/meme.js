@@ -63,6 +63,7 @@ const Meme = ({ meme }) => {
           url="/meme"
           category={"Memes"}
           isBtn={false}
+          bg="#EAF6F6"
         />
       </Fade>
       {memes?.length != 0 && (

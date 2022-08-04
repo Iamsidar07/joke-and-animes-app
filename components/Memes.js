@@ -4,7 +4,7 @@ import { Fade } from 'react-reveal';
 const Memes = ({memes}) => {
 
   let topMemes=[];
-  for (let index = 0; index < 50; index++) {
+  for (let index = 0; index < 100; index++) {
     const element = memes[index];
     topMemes.push(element) 
   }
@@ -15,11 +15,13 @@ const Memes = ({memes}) => {
       {topMemes?.map(({url,id,name})=>{
         return (
 
-        <div key={id} className={typeof url==undefined?"hidden ":"group bg-gray-200/5 rounded relative  m-1 md:m-3  h-72 md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
+        <div key={id} className={typeof url==undefined?"hidden ":"group rounded   m-1 md:m-3   md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
             <Image 
                 src={url}
-                layout="fill"
+                layout="responsive"
                 objectFit='cover'
+                width={1920}
+                height={1780}
                 alt={name}
                 placeholder='blur'
                 blurDataURL={url}

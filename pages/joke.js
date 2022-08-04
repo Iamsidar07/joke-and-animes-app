@@ -62,6 +62,7 @@ const Jokes = ({ happy }) => {
         url="/joke"
         category={"Jokes"}
         isBtn={false}
+        bg="#EAE509"
       />
       </Fade>
       {jokes?.length != 0 && (

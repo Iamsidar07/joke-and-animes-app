@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,11 +13,9 @@ html{
 body{
     font-family: 'Ubuntu', sans-serif;
 }
-#effect{
-    height: 70px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to bottom top,#334155eb);
+.box-shadow{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cursive-font{
+    font-family: 'Dancing Script', cursive;
 }
