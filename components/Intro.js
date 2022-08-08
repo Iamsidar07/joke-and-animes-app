@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CustomImage from "./CustomImage";
 const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
+  
   return (
     <div
       className={
         isLeft
-          ? " max-w-sm box-shadow md:max-w-6xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse   my-12 group  flex items-center   justify-between rounded p-3 md:rounded-3xl z-[-10]"
-          : " max-w-sm box-shadow md:max-w-6xl mx-auto md:px-10  flex-col-reverse my-12 overflow-auto    md:flex-row flex items-center  justify-between rounded md:rounded-3xl p-3 z-[-10]"
+          ? "md:hover:shadow-2xl max-w-sm shadow-xl  md:max-w-7xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse   mb-12 group  flex items-center   justify-between rounded p-3 md:rounded-3xl z-[-10]"
+          : "md:hover:shadow-2xl max-w-sm shadow-xl  md:max-w-7xl mx-auto md:px-10  flex-col-reverse mb-12 overflow-auto    md:flex-row flex items-center  justify-between rounded md:rounded-3xl p-3 z-[-10]"
       }
     style={{background:`${bg}`}}>
       <div className="    flex flex-col items-center justify-start  md:w-[60%]     space-y-2 py-5">
@@ -17,7 +19,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
           </h1>
           <p className="lowercase ">{paragraph}</p>
           {isBtn && (
-            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full  bg-orange-600   transition-all duration-100 ease-in  md:hover:bg-orange-500 text-white  py-3 px-6  md:inline-flex items-center">
+            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full  bg-orange-600   transition-all duration-100 ease-in  md:hover:bg-orange-500 text-white  py-4 px-8  md:inline-flex items-center">
               <Link href={url}>
                 <a>
                   <svg
@@ -46,18 +48,15 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
           )}
         </div>
       </div>
-      <div className="shadow-md max-w-sm rounded-full   p-2 shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
-        <Image
-          src={pic.url}
-          layout="responsive"
-          alt="Anime"
-          objectFit="cover"
-          placeholder="blur"
-          width={100}
+      <div className="shadow-md max-w-sm rounded   p-2 shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
+        
+        <CustomImage
+         url={pic.url}
+           width={100}
           height={100}
-          blurDataURL={pic.url}
-          priority
-          className="rounded-full  transition-all duration-200 overflow-auto p-2 box-shadow"
+          layout="responsive"
+          objectFit="cover"
+          customClassName={"rounded  transition-all duration-200 overflow-auto p-2 box-shadow"}
         />
       </div>
     </div>

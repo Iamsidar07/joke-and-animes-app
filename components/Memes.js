@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { Fade } from 'react-reveal';
+import CustomImage from './CustomImage';
 const Memes = ({memes}) => {
-
+  const[load,setLoad]=useState(true);
   let topMemes=[];
   for (let index = 0; index < 100; index++) {
     const element = memes[index];
@@ -16,17 +17,12 @@ const Memes = ({memes}) => {
         return (
 
         <div key={id} className={typeof url==undefined?"hidden ":"group rounded   m-1 md:m-3   md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
-            <Image 
-                src={url}
-                layout="responsive"
-                objectFit='cover'
-                width={1920}
-                height={1780}
-                alt={name}
-                placeholder='blur'
-                blurDataURL={url}
-                priority
-                className="rounded md:group-hover:scale-125 transition-all ease-in duration-200"
+            <CustomImage
+              url={url}
+              layout="responsive"
+              objectFit="cover"
+              width={1920}
+              height={1180}
             />
         </div>
 
