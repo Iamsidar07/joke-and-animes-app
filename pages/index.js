@@ -48,9 +48,14 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
       </Head>
       <div>
         {/* <CrushIntro loading={loading} pic={kiss} setLoading={setLoading} /> */}
-        <div className="hero-bg h-72 z-[-10] mb-5">
-          <div className="text-3xl  md:text-6xl h-full flex flex-col items-center justify-evenly w-full pt-5 ">
-             <h1>Search,<span className="text-blue-500">Read</span> and Laugh</h1>
+        <div className="hero-bg md:bg-contain  h-[84vh] z-[-10] -mb-48 md:mb-5">
+          <div className="text-4xl  md:text-6xl h-full flex flex-col items-center justify-evenly w-full pt-5 ">
+             <h1 className=" box-shadow bg-white p-2 rounded">Search,
+             <Link href={"/joke"}>
+             <span className="text-blue-500 cursor-pointer px-1">Read</span>
+             </Link>
+              and Laugh</h1>
+
           </div>
         </div>
         <Fade bottom>
@@ -94,7 +99,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
             url="/joke"
             category={"Jokes"}
             isBtn={true}
-            bg="#EAE509"
+            bg="#ABC9FF"
           />
           <Intro
             loading={loading}

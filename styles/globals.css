@@ -20,8 +20,17 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 .hero-bg{
-    background-image: url("../public/bg.jpg");
-    object-fit: cover;
+    background-image: url("../public/bg.gif");
     background-repeat: no-repeat;
     background-attachment: scroll;
+    background-size: contain;
+    background-position: center top;
 }
+.mask {
+    -webkit-mask-image: url("https://iconape.com/wp-content/files/vc/201433/png/201433.png");
+    mask-image: url("https://iconape.com/wp-content/files/vc/201433/png/201433.png");
+    -webkit-mask-size: 70%;
+    mask-size: 70%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;    
+  }

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import CustomImage from "./CustomImage";
+import Image from "next/image";
 const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
   
   return (
@@ -18,7 +19,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
           </h1>
           <p className="lowercase ">{paragraph}</p>
           {isBtn && (
-            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full  bg-orange-600   transition-all duration-100 ease-in  md:hover:bg-orange-500 text-white  py-4 px-8  md:inline-flex items-center">
+            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full md:rounded  bg-orange-600   transition-transform duration-75 ease-in  md:hover:bg-orange-500 md:hover:scale-x-110 text-white  py-3 px-5  md:inline-flex items-center">
               <Link href={url}>
                 <a>
                   <svg
@@ -47,16 +48,16 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
           )}
         </div>
       </div>
-      <div className="shadow-md max-w-sm rounded-lg md:rounded-2xl shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
-        
-        <CustomImage
-         url={pic.url}
+      <div className="shadow-md max-w-sm  rounded shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
+        <Image
+          src={pic.url}
           width={1080}
           height={1220}
           layout="responsive"
           objectFit="cover"
-          customClassName={"rounded-lg md:rounded-2xl md:hover:scale-125  transition-all duration-200 overflow-auto p-2 box-shadow"}
+          className=" md:hover:scale-125  transition-all duration-200 overflow-auto p-2 box-shadow"
         />
+       
       </div>
     </div>
   );
