@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import CustomImage from "./CustomImage";
 const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
@@ -8,8 +7,8 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
     <div
       className={
         isLeft
-          ? "md:hover:shadow-2xl max-w-sm shadow-xl  md:max-w-7xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse   mb-12 group  flex items-center   justify-between rounded p-3 md:rounded-3xl z-[-10]"
-          : "md:hover:shadow-2xl max-w-sm shadow-xl  md:max-w-7xl mx-auto md:px-10  flex-col-reverse mb-12 overflow-auto    md:flex-row flex items-center  justify-between rounded md:rounded-3xl p-3 z-[-10]"
+          ? "md:hover:box-shadow max-w-sm  box-shadow md:max-w-7xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse   mb-12 group  flex items-center   justify-between rounded-xl p-3 md:rounded-3xl z-[-10]"
+          : "md:hover:box-shadow max-w-sm  box-shadow md:max-w-7xl mx-auto md:px-10  flex-col-reverse mb-12 overflow-auto    md:flex-row flex items-center  justify-between rounded-xl md:rounded-3xl p-3 z-[-10]"
       }
     style={{background:`${bg}`}}>
       <div className="    flex flex-col items-center justify-start  md:w-[60%]     space-y-2 py-5">
@@ -48,15 +47,15 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
           )}
         </div>
       </div>
-      <div className="shadow-md max-w-sm rounded   p-2 shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
+      <div className="shadow-md max-w-sm rounded-lg md:rounded-2xl shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
         
         <CustomImage
          url={pic.url}
-           width={100}
-          height={100}
+          width={1080}
+          height={1220}
           layout="responsive"
           objectFit="cover"
-          customClassName={"rounded  transition-all duration-200 overflow-auto p-2 box-shadow"}
+          customClassName={"rounded-lg md:rounded-2xl md:hover:scale-125  transition-all duration-200 overflow-auto p-2 box-shadow"}
         />
       </div>
     </div>
