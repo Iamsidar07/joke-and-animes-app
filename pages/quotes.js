@@ -3,6 +3,7 @@ import Quote from "../components/Quote";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
 import { Fade } from "react-reveal";
+import Loading from "../components/Loading";
 
 export async function getServerSideProps() {
   const kill_res = await fetch("https://waifu.pics/api/sfw/kill");
@@ -27,18 +28,24 @@ const Quotes = ({ kill, quotes }) => {
   const getQuotes = (e) => {
     e.preventDefault();
     const getData = async function () {
+      setLoading(true);
+      
       const res = await fetch("https://animechan.vercel.app/api/quotes");
       const data = await res.json();
       setQuotesData(data);
+      setLoading(false);
     };
     getData();
   };
 
   useEffect(() => {
     const getData = async function () {
+      setLoading(true);
+      
       const res = await fetch("https://animechan.vercel.app/api/quotes");
       const data = await res.json();
       setQuotesData(data);
+      setLoading(false);
     };
     getData();
   }, []);
@@ -64,7 +71,7 @@ const Quotes = ({ kill, quotes }) => {
         bg={"#FFDEDE"}
       />
       </Fade>
-      {quotesData.length != 0 && <Quote quotes={quotesData} />}
+      {quotesData.length != 0 ? <Quote quotes={quotesData} />:<Loading/>}
       <Quote quotes={quotes} />
     </div>
   );

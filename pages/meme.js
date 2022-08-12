@@ -3,6 +3,7 @@ import Memes from "../components/Memes";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
 import { Fade } from "react-reveal";
+import Loading from "../components/Loading";
 
 export async function getServerSideProps() {
   const meme_res = await fetch("https://api.catboys.com/img");
@@ -24,23 +25,27 @@ const Meme = ({ meme }) => {
   const getMemes = (e) => {
     e.preventDefault();
     const getData = async function () {
+      setLoading(true);
       const res = await fetch("https://api.imgflip.com/get_memes");
       const data = await res.json();
       setMemes(data.data.memes);
+      setLoading(false);
     };
     getData();
   };
 
   useEffect(() => {
     const getData = async function () {
+      setLoading(true);
       const res = await fetch("https://api.imgflip.com/get_memes");
       const data = await res.json();
       setMemes(data.data.memes);
+      setLoading(false);
     };
     getData();
   }, []);
 
-  console.log(memes);
+  console.log(loading);
 
   return (
     <div className="p-3 max-w-sm md:py-10  md:max-w-6xl mx-auto">
@@ -52,9 +57,7 @@ const Meme = ({ meme }) => {
         />
 
         <Intro
-          loading={loading}
           pic={meme}
-          setLoading={setLoading}
           title={"Favourite Memes"}
           paragraph={
             "Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."
@@ -66,14 +69,15 @@ const Meme = ({ meme }) => {
           bg="#EAF6F6"
         />
       </Fade>
-      {memes?.length != 0 && (
+      {memes?.length != 0 ? (
         <>
           <h1 className="md:text-3xl font-bold text-gray-400 p-3">
             Showing {keywords} Memes results{" "}
           </h1>
           <Memes memes={memes} />
         </>
-      )}
+      ):
+      <Loading/>}
     </div>
   );
 };

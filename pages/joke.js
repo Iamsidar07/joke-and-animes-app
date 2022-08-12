@@ -3,6 +3,7 @@ import Joke from "../components/Joke";
 import Search from "../components/Search";
 import Intro from "../components/Intro";
 import { Fade } from "react-reveal";
+import Loading from "../components/Loading"
 
 export async function getServerSideProps() {
   const happy_res = await fetch("https://waifu.pics/api/sfw/happy");
@@ -22,26 +23,35 @@ const Jokes = ({ happy }) => {
 
   const getJokes = (e) => {
     e.preventDefault();
+   
     const getData = async function () {
+      setLoading(true);
       const res = await fetch(
         `https://api.chucknorris.io/jokes/search?query=${keywords}`
       );
       const data = await res.json();
       setJokes(data.result);
+      setLoading(false);
     };
     getData();
+    
   };
 
   useEffect(() => {
+
     const getData = async function () {
+      setLoading(true);
       const res = await fetch(
         `https://api.chucknorris.io/jokes/search?query=${keywords}`
       );
       const data = await res.json();
       setJokes(data.result);
+      setLoading(false);
     };
     getData();
-  }, [keywords]);
+
+  }, []);
+
 
   return (
     <div className="p-3 max-w-sm md:py-10   md:max-w-6xl mx-auto">
@@ -53,9 +63,7 @@ const Jokes = ({ happy }) => {
       />
 
       <Intro
-        loading={loading}
         pic={happy}
-        setLoading={setLoading}
         title={"Funny Jokes"}
         paragraph={"Get Your Favourite Jokes from various categories Like Sex,Political,nsfw,etc."}
         isLeft={false}
@@ -65,6 +73,7 @@ const Jokes = ({ happy }) => {
         bg="#ABC9FF"
       />
       </Fade>
+      {!jokes&& <Loading/>}
       {jokes?.length != 0 && (
         <>
           <h1 className="md:text-3xl font-bold text-gray-400 p-3">

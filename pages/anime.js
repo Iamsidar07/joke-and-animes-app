@@ -3,6 +3,7 @@ import Search from "../components/Search";
 import Intro from "../components/Intro";
 import Animes from "../components/Animes";
 import { Fade } from "react-reveal";
+import Loading from "../components/Loading";
 
 export async function getServerSideProps() {
   const smile_res = await fetch("https://waifu.pics/api/sfw/smile");
@@ -23,11 +24,13 @@ const Anime = ({ smile }) => {
   const getAnimes = (e) => {
     e.preventDefault();
     const getData = async function () {
+      setLoading(true);
       const res = await fetch(
         `https://api.waifu.im/random/?is_nsfw=null&selected_tags=${keywords}&many=true&full=false`
       );
       const data = await res.json();
       setAnimes(data);
+      setLoading(false);
     };
     getData();
     
@@ -35,11 +38,13 @@ const Anime = ({ smile }) => {
 
   useEffect(()=>{
     const getData = async function () {
+      setLoading(true);
       const res = await fetch(
         `https://api.waifu.im/random/?is_nsfw=null&selected_tags=${keywords}&many=true&full=false`
       );
       const data = await res.json();
       setAnimes(data);
+      setLoading(false);
     };
     getData();
   },[]);
@@ -67,8 +72,10 @@ const Anime = ({ smile }) => {
         bg="#59CE8F"
       />
       </Fade>
-     
+      {animes?<>
       <Animes animes={animes}/>
+      </>:
+      <Loading/>}
     </div>
   );
 };
