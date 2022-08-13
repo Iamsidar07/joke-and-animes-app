@@ -48,11 +48,11 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
       </Head>
       <div className="p-2">
         {/* <CrushIntro loading={loading} pic={kiss} setLoading={setLoading} /> */}
-        <div className=" hero-bg md:bg-contain  h-[90vh] z-[-10]   -mb-40 md:-mb-10">
+        <div className=" hero-bg h-[40vh] md:h-[90vh] z-[-10]   md:-mb-10">
           <div className="text-4xl  md:text-6xl h-full flex flex-col items-center justify-evenly w-full pt-5 ">
              <h1 className=" box-shadow bg-white p-2 rounded">Search,
              <Link href={"/joke"}>
-             <span className="text-blue-500 cursor-pointer px-1">Read</span>
+             <a className="text-blue-500 cursor-pointer px-1">Read</a>
              </Link>
               and Laugh</h1>
 

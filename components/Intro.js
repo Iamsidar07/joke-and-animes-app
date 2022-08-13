@@ -19,12 +19,12 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
           </h1>
           <p className="lowercase ">{paragraph}</p>
           {isBtn && (
-            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full md:rounded  bg-orange-600   transition-transform duration-75 ease-in  md:hover:bg-orange-500 md:hover:scale-110 text-white  py-3 px-5  md:inline-flex items-center">
+            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full  bg-orange-600   transition-transform duration-75 ease-in  md:hover:bg-orange-500 md:hover:scale-110 text-white  py-3 px-5  md:inline-flex items-center">
               <Link href={url}>
-                <a>
+                <a className="flex items-center ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-6  inline-block "
+                    className="h-4 w-6 mr-1 inline-block "
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
