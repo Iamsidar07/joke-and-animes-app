@@ -20,9 +20,9 @@ const Memes = ({memes}) => {
             <CustomImage
               url={url}
               layout="responsive"
-              objectFit="cover"
-              width={1920}
-              height={1180}
+              objectFit="contain"
+              width={1080}
+              height={1920}
             />
         </div>
 

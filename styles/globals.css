@@ -20,9 +20,9 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 .hero-bg{
-    background-image: url("../public/bg.gif");
+    background-image: url("../public/bg.png");
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: contain;
     background-position: center top;
 }

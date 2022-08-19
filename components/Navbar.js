@@ -29,7 +29,7 @@ function scrollFunction() {
 }
 
   return (
-    <nav className={navbg?"shadow-lg w-full bg-white z-[100]   p-2 sticky top-0 left-0 right-0 md:transition-all ease-in md:duration-500":" shadow-lg z-[10]  w-full p-2 sticky top-0 left-0 right-0 md:transition-all ease-in md:duration-500"}>
+    <nav className={navbg?"shadow w-full bg-white z-[100]   p-2 sticky top-0 left-0 right-0 md:transition-all ease-in md:duration-500":" shadow z-[10]  w-full p-2 sticky top-0 left-0 right-0 md:transition-all ease-in md:duration-500"}>
       <div className="max-w-5xl mx-auto">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">

@@ -13,13 +13,13 @@ const Animes = ({ animes }) => {
                 url={url}
                 layout="responsive"
                 width={1080}
-                height={1080}
+                height={1180}
                 objectFit="cover"
                 objectPosition={"top"}
                 customClassName={
                   typeof url == undefined
-                    ? " rounded-md hidden max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
-                    : " rounded  max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
+                    ? " rounded-t-md hidden max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
+                    : " rounded-t  max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
                 }
               />
               <div className="cursor-pointer px-2 py-3">
