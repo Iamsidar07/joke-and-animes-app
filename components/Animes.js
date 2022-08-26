@@ -12,8 +12,8 @@ const Animes = ({ animes }) => {
               <CustomImage
                 url={url}
                 layout="responsive"
-                width={1080}
-                height={1180}
+                width={1180}
+                height={1480}
                 objectFit="cover"
                 objectPosition={"top"}
                 customClassName={

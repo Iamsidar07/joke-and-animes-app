@@ -51,7 +51,7 @@ const Anime = ({ smile }) => {
 
 
   return (
-    <div className="p-3  max-w-sm md:py-10 md:max-w-6xl mx-auto">
+    <div className="p-3  max-w-sm md:py-10 md:max-w-7xl mx-auto">
     <Fade bottom>
       <Search
         funCall={getAnimes}

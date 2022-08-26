@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 *{
     padding: 0;
     margin: 0;
+    font-family: 'DM Sans', sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -16,17 +16,7 @@ body{
 .box-shadow{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.cursive-font{
-    font-family: 'Dancing Script', cursive;
+.gradient{
+    background-image: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgba(37,249,245,1) 0%, rgba(8,70,218,1) 90% );
 }
-/* .hero-bg{
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    background-position: center top;
-} */
 
-  .left-mask{
-    -webkit-mask-image: linear-gradient(-90deg,rgb(0, 0, 0),rgba(0, 0, 0, 0))!important;
-}

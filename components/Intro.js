@@ -2,24 +2,20 @@ import React from "react";
 import Link from "next/link";
 import CustomImage from "./CustomImage";
 import Image from "next/image";
-const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
-  
+const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
+  console.log(pic)
   return (
     <div
-      className={
-        isLeft
-          ? "md:hover:box-shadow max-w-sm  box-shadow md:max-w-7xl mx-auto md:px-10  flex-col-reverse overflow-auto  md:flex-row-reverse   mb-12 group  flex items-center   justify-between rounded-xl p-3 md:rounded-3xl z-[-10]"
-          : "md:hover:box-shadow max-w-sm  box-shadow md:max-w-7xl mx-auto md:px-10  flex-col-reverse mb-12 overflow-auto    md:flex-row flex items-center  justify-between rounded-xl md:rounded-3xl p-3 z-[-10]"
-      }
-    style={{background:`${bg}`}}>
-      <div className="    flex flex-col items-center justify-start  md:w-[60%]     space-y-2 py-5">
-        <div className=" space-y-3 ">
-          <h1 className="text-2xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-800 to-pink-600 md:text-4xl font-bold  transition-colors duration-100 ease-in">
+      className={` md:hover:box-shadow max-w-sm md:h-screen   box-shadow md:max-w-7xl mx-auto md:px-10  flex-col-reverse   mb-12 group  flex items-center   justify-content rounded-xl p-3 md:rounded-3xl  ${isLeft?"md:flex-row-reverse ":"md:flex-row "} `} >
+      <div className=" px-3  flex flex-col items-center justify-start   space-y-2 py-5">
+        <div className=" space-y-3 md:space-y-6 ">
+          <h1 className="text-3xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-800 to-pink-600 md:text-6xl font-bold  transition-colors duration-100 ease-in">
             {title}
           </h1>
-          <p className="lowercase ">{paragraph}</p>
+          <div>
+          <p className="lowercase text-2xl md:text-3xl">{paragraph}</p>
           {isBtn && (
-            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full  bg-orange-600   transition-transform duration-75 ease-in  md:hover:bg-orange-500 md:hover:scale-110 text-white  py-3 px-5  md:inline-flex items-center">
+            <button className="mt-6 w-full md:w-auto flex  justify-center  rounded-full  bg-gradient-to-tr from-[#D4145A] to-[#FBB03B] transition-transform duration-75 ease-in  md:hover:bg-orange-500 md:hover:scale-110 text-white  py-3 px-5  md:inline-flex items-center">
               <Link href={url}>
                 <a className="flex items-center ">
                   <svg
@@ -46,15 +42,18 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn,bg }) => {
               </Link>
             </button>
           )}
+          </div>
         </div>
       </div>
-      <div className="shadow-md max-w-sm  rounded shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
+      <div className=" shadow-md   rounded-xl shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block bg-white  z-[1]" >
         <Image
           src={pic.url}
-          width={1080}
-          height={1220}
+          width={1920}
+          height={1080}
           layout="responsive"
           objectFit="cover"
+          objectPosition={"top"}
+          alt="Feature image"
           className=" md:hover:scale-125  transition-all duration-200 overflow-auto p-2 box-shadow"
         />
        

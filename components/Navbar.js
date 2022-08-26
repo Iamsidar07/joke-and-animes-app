@@ -12,34 +12,34 @@ const Navbar = () => {
     { name: "Anime's Quotes", link: "/quotes", id: 4, icon: "✅" },
   ];
   const [open, setOpen] = useState(false);
-  const [navbg,setNavbg]=useState(false);
+  const [navColor,setNavColor]=useState(false);
   
   useEffect(()=>{
-    window.onscroll = function() {scrollFunction()};
+    window.addEventListener("scroll",handleNavbar);
   },[])
-
-
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    setNavbg(true);
-  }else if(document.body.scrollHeight > 20 || document.documentElement.scrollHeight > 20){
-    setNavbg(false);
+const handleNavbar=()=>{
+  if(window.scrollY>=60) {
+    setNavColor(true);
   }
+  console.log(window.scrollY)
 }
+console.log(navColor)
+
+
 
   return (
-    <nav className={navbg?"shadow-sm w-full bg-white z-[100]   p-2 sticky top-0 left-0 right-0 md:transition-all ease-in md:duration-500":" shadow-sm z-[10]  w-full p-2 sticky top-0 left-0 right-0 md:transition-all ease-in md:duration-500"}>
+    <nav className={`sticky  box-shadow top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/80":"bg-white"}  transition-all duration-200 ease-in z-[100] px-3 py-2` }>
       <div className="max-w-5xl mx-auto">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
         <Link href={"/"}>
-        <div className="w-20 h-20 relative cursor-pointer">
+        <div className="w-16 h-16 relative cursor-pointer">
         <Image
             src={"https://iconape.com/wp-content/files/vc/201433/png/201433.png"}
             layout="fill"
             objectFit="contain"
             priority
+            alt="Logo"
            />
         </div>
           
@@ -52,19 +52,20 @@ function scrollFunction() {
             src={open?"/cross.svg":"/menu.svg"}
             width={40}
             height={40}
+            alt="menu"
           />
         </div>
         </div>
 
         <ul
-          className={`bg-white flex flex-col items-center justify-center md:flex-row  border-gray-100 border-t-2 md:border-none md:bg-transparent  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-500 ease-in ${
-            open ? "top-24" : "top-[-490px] "
+          className={`  h-screen md:h-fit flex flex-col items-center jus md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
+            open ? " top-20 bg-white" : "top-[-490px] "
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.id}
-              className={navbg?" group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer":" cursor-pointer  group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500 rounded-full transition-all ease-in duration-100"}
+              className={navColor?" group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer":" cursor-pointer  group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500 rounded-full transition-all ease-in duration-100"}
             >
               <Link href={link.link}>
                 <a>
