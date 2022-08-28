@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Image from 'next/image'
 import { Fade } from 'react-reveal';
 import CustomImage from './CustomImage';
+import { MyContextProvider } from '../context/myContext';
 const Memes = ({memes}) => {
+
   const[load,setLoad]=useState(true);
+  const [singleItem,setSingleItem]=useState(null);
   let topMemes=[];
   for (let index = 0; index < 100; index++) {
     const element = memes[index];
@@ -11,20 +14,20 @@ const Memes = ({memes}) => {
   }
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-3 space-y-14 md:gap-2 md:grid-cols-4'>
+    <div className='grid grid-cols-1 sm:grid-cols-2  md:gap-1 md:grid-cols-3 '>
      <Fade bottom>
       {topMemes?.map(({url,id,name})=>{
         return (
-
-        <div key={id} className={typeof url==undefined?"hidden ":"group rounded   m-1 md:m-3 relative   md:hover:scale-105 duration-100 ease-in cursor-pointer bg-blend-darken "}>
+        <div key={id} onClick={()=>setSingleItem(url)} className={typeof url==undefined?"hidden ":"group    m-1 md:m-3   md:hover:scale-105 duration-100 ease-in cursor-pointer "}>
             <CustomImage
               url={url}
               layout="responsive"
               objectFit="contain"
               width={1920}
               height={1080}
+              customClassName={"rounded-xl"}
             />
-            <p className='absolute  bottom-[-50px] md:group-hover:bottom-10  ml-2 md:opacity-0 p-2 rounded-xl group-hover:opacity-100 h-fit w-fit bg-gradient-to-tr from-[#D4145A] to-[#FBB03B] duration-100 ease-in transition-all'>{name}</p>
+            <p className='relative bottom-0 md:-bottom-10 md:absolute   md:group-hover:bottom-10  ml-2 md:opacity-0 p-2 rounded md:group-hover:-translate-y-5 md:group-hover:opacity-100 h-fit bg-white duration-100 ease-in transition-all'>{name}</p>
         </div>
 
         )

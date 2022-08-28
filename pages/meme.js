@@ -48,7 +48,7 @@ const Meme = ({ meme }) => {
   console.log(loading);
 
   return (
-    <div className="p-3 max-w-sm md:py-10  md:max-w-7xl mx-auto">
+    <div className="p-3  md:py-10   mx-auto">
       <Fade bottom>
         <Search
           funCall={getMemes}
@@ -56,22 +56,10 @@ const Meme = ({ meme }) => {
           setKeywords={setKeywords}
         />
 
-        <Intro
-          pic={meme}
-          title={"Favourite Memes"}
-          paragraph={
-            "Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."
-          }
-          isLeft={true}
-          url="/meme"
-          category={"Memes"}
-          isBtn={false}
-          bg="#EAF6F6"
-        />
       </Fade>
       {memes?.length != 0 ? (
         <>
-          <h1 className="md:text-3xl font-bold text-gray-400 p-3">
+          <h1 className="md:text-3xl text-2xl font-bold text-gray-400 p-3">
             Showing {keywords} Memes results{" "}
           </h1>
           <Memes memes={memes} />

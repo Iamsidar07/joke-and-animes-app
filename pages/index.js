@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Fade } from "react-reveal";
 import CrushIntro from "../components/CrushIntro";
 import Intro from "../components/Intro";
+import { MyContextProvider } from "../context/myContext";
 
 export async function getServerSideProps() {
   // const anime_res = await fetch("https://anime-facts-rest-api.herokuapp.com/api/v1");
@@ -37,6 +38,8 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ kiss, happy, kill, meme, smile }) {
+  const value=useContext(MyContextProvider);
+  console.log(value);
   const [loading, setLoading] = useState(false);
 
   return (
@@ -48,25 +51,19 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
       </Head>
       <div className="">
         {/* <CrushIntro loading={loading} pic={kiss} setLoading={setLoading} /> */}
-        <div className="h-screen relative " style={{
-        background: `url("${meme?.url}")`,
-        backgroundRepeat:"no-repeat",
-        backgroundAttachment:"fixed",
-        backgroundSize: "cover",
-      }}>  
-           <div className="absolute top-0 left-0 right-0 bg-black/20 h-screen"></div>
-          <div className="text-4xl  md:text-8xl h-full flex flex-col items-center justify-evenly w-full pt-5 ">
-             <h1 className=" box-shadow bg-white p-2 rounded-xl">Search,
+        <div className="overflow-hidden  md:h-screen relative  flex items-center justify-center">  
+           <video src="video2.mp4" autoPlay muted loop  className="w-[100vw] top-0 "></video>
+          <div className="text-4xl text-white absolute   md:text-8xl h-full flex flex-col items-center justify-center w-full pt-5 ">
+             <h1 className="   p-2 rounded-xl">Search,
              <Link href={"/joke"}>
              <a className="text-blue-500 cursor-pointer px-1 z-[11] ">Read </a>
              </Link>
               and Laugh</h1>
-
           </div>
         </div>
        
-        <Fade bottom >
-          <Intro
+        <div className="flex items-center justify-center   flex-wrap min-h-screen py-4">
+        <Intro
             loading={loading}
             pic={kill}
             setLoading={setLoading}
@@ -122,7 +119,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
             isBtn={true}
             bg="#EAF6F6"
           />
-        </Fade>
+        </div>
       </div>
     </div>
   );

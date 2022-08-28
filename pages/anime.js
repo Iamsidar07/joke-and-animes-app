@@ -51,7 +51,7 @@ const Anime = ({ smile }) => {
 
 
   return (
-    <div className="p-3  max-w-sm md:py-10 md:max-w-7xl mx-auto">
+    <div className="p-3   md:py-10 ">
     <Fade bottom>
       <Search
         funCall={getAnimes}
@@ -59,18 +59,6 @@ const Anime = ({ smile }) => {
         setKeywords={setKeywords}
       />
 
-      <Intro
-        loading={loading}
-        pic={smile}
-        setLoading={setLoading}
-        title={"Anime Collections"}
-        paragraph={"Get Your Favourite Animes from various categories Like smile,selfie,milf,assetc."}
-        isLeft={false}
-        url="/anime"
-        category={"Anime's"}
-        isBtn={false}
-        bg="#59CE8F"
-      />
       </Fade>
       {animes?<>
       <Animes animes={animes}/>

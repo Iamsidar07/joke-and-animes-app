@@ -54,7 +54,7 @@ const Jokes = ({ happy }) => {
 
 
   return (
-    <div className="p-3 max-w-sm md:py-10   md:max-w-7xl mx-auto">
+    <div className="p-3 md:py-10 ">
       <Fade bottom>
       <Search
         funCall={getJokes}
@@ -62,26 +62,18 @@ const Jokes = ({ happy }) => {
         setKeywords={setKeywords}
       />
 
-      <Intro
-        pic={happy}
-        title={"Funny Jokes"}
-        paragraph={"Get Your Favourite Jokes from various categories Like Sex,Political,nsfw,etc."}
-        isLeft={false}
-        url="/joke"
-        category={"Jokes"}
-        isBtn={false}
-        bg="#ABC9FF"
-      />
+     
       </Fade>
-      {!jokes&& <Loading/>}
-      {jokes?.length != 0 && (
+      {jokes?.length != 0 ? (
         <>
           <h1 className="md:text-3xl font-bold text-gray-400 p-3">
             Showing {keywords} Jokes results{" "}
           </h1>
           <Joke data={jokes} keywords={keywords} />
         </>
-      )}
+      )
+      :
+      <Loading/>}
     </div>
   );
 };

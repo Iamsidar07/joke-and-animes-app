@@ -51,24 +51,12 @@ const Quotes = ({ kill, quotes }) => {
   }, []);
 
   return (
-    <div className="p-3   max-w-md md:max-w-7xl  md:py-10  mx-auto">
+    <div className="p-3  md:py-10 ">
       <Fade bottom>
       <Search
         funCall={getQuotes}
         keywords={keywords}
         setKeywords={setKeywords}
-      />
-      <Intro
-        loading={loading}
-        pic={kill}
-        setLoading={setLoading}
-        title={"Animes Quotes"}
-        paragraph={"get quotes of your favourite Animes Character's Quote Like Ergo Proxy,Haruhi Suzumiya,Basara Tōjō etc."}
-        isLeft={true}
-        url="/quotes"
-        category={"Quotes"}
-        isBtn={false}
-        bg={"#FFDEDE"}
       />
       </Fade>
       {quotesData.length != 0 ? <Quote quotes={quotesData} />:<Loading/>}

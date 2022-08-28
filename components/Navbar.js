@@ -15,20 +15,22 @@ const Navbar = () => {
   const [navColor,setNavColor]=useState(false);
   
   useEffect(()=>{
+    handleNavbar();
     window.addEventListener("scroll",handleNavbar);
   },[])
 const handleNavbar=()=>{
   if(window.scrollY>=60) {
     setNavColor(true);
+  }else{
+    setNavColor(false);
   }
-  console.log(window.scrollY)
 }
 console.log(navColor)
 
 
 
   return (
-    <nav className={`sticky  box-shadow top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/80":"bg-white"}  transition-all duration-200 ease-in z-[100] px-3 py-2` }>
+    <nav className={`md:fixed  sticky top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/90 box-shadow md:block ":"block md:hidden"}  transition-all duration-250 ease-in z-[100] px-3 py-2` }>
       <div className="max-w-5xl mx-auto">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
@@ -65,10 +67,10 @@ console.log(navColor)
           {Links.map((link) => (
             <li
               key={link.id}
-              className={navColor?" group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer":" cursor-pointer  group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500 rounded-full transition-all ease-in duration-100"}
+              className={` group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer ${navColor?"text-black":"text--500"}`}
             >
               <Link href={link.link}>
-                <a>
+                <a >
                   {link.name}
                 </a>
               </Link>

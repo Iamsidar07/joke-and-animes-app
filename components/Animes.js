@@ -4,7 +4,7 @@ import { Fade } from "react-reveal";
 import CustomImage from "./CustomImage";
 const Animes = ({ animes }) => {
   return (
-    <div className=" w-full mx-auto gap-2 max-w-full  grid grid-cols-1 md:grid-cols-3  ">
+    <div className=" w-full mx-auto gap-2 max-w-full  grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2  md:gap-1  ">
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
         return (
           <Fade bottom key={image_id}>
@@ -12,14 +12,14 @@ const Animes = ({ animes }) => {
               <CustomImage
                 url={url}
                 layout="responsive"
-                width={1180}
+                width={1920}
                 height={1480}
                 objectFit="cover"
                 objectPosition={"top"}
                 customClassName={
                   typeof url == undefined
-                    ? " rounded-t-md hidden max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
-                    : " rounded-t  max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
+                    ? "hidden"
+                    : " rounded-t-xl md:group-hover:rounded-t-xl  max-w-full h-fit md:h-auto md:cursor-pointer md:group-hover:scale-125 transition-all ease-in duration-200"
                 }
               />
               <div className="cursor-pointer px-2 py-3">
