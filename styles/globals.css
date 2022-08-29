@@ -5,13 +5,15 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'DM Sans', sans-serif;
+    
 }
 html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+    
    
 }
 .box-shadow{

@@ -57,6 +57,7 @@ const Meme = ({ meme }) => {
         />
 
       </Fade>
+
       {memes?.length != 0 ? (
         <>
           <h1 className="md:text-3xl text-2xl font-bold text-gray-400 p-3">

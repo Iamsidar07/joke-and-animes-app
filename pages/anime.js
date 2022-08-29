@@ -60,9 +60,7 @@ const Anime = ({ smile }) => {
       />
 
       </Fade>
-      {animes?<>
-      <Animes animes={animes}/>
-      </>:
+      {animes?.length!=0?<Animes animes={animes}/>:
       <Loading/>}
     </div>
   );

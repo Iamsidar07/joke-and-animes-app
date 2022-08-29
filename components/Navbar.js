@@ -31,7 +31,7 @@ console.log(navColor)
 
   return (
     <nav className={`md:fixed  sticky top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/90 box-shadow md:block ":"block md:hidden"}  transition-all duration-250 ease-in z-[100] px-3 py-2` }>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
         <Link href={"/"}>
@@ -67,7 +67,7 @@ console.log(navColor)
           {Links.map((link) => (
             <li
               key={link.id}
-              className={` group whitespace-nowrap text-sm md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer ${navColor?"text-black":"text--500"}`}
+              className={` group whitespace-nowrap text-lg md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer ${navColor?"text-black":"text--500"}`}
             >
               <Link href={link.link}>
                 <a >
@@ -79,7 +79,7 @@ console.log(navColor)
               </small>
             </li>
           ))}
-          <button className="text-white bg-blue-500 md:hover:bg-blue-600 md:hover:-translate-y-1 transition-all duration-75 ease-in  px-6 py-2  md:ml-2 mt-4 md:mt-0 rounded-full ">
+          <button className="text-white bg-blue-500 md:hover:bg-blue-600 md:hover:-translate-y-1 transition-all duration-75 ease-in  px-6 py-3  md:ml-2 mt-4 md:mt-0 rounded-full ">
             <Link href={"https://twitter.com/iamsidar07"}>Follow 🕊️</Link>
           </button>
         </ul>

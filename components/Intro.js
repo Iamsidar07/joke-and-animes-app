@@ -5,7 +5,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
 
   return (
     <div
-      className={` md:hover:shadow-lg box-shadow md:shadow-none max-w-md  md:max-w-xl mx-auto md:px-10    mb-12 group  flex items-center   justify-content rounded-xl p-3 md:rounded-3xl flex-col  `} >
+      className={` md:hover:shadow-lg box-shadow md:box-shadow max-w-md  md:max-w-xl mx-auto md:px-10    mb-12 group  flex items-center   justify-content rounded-xl p-3 md:rounded-3xl flex-col  `} >
       <div className=" shadow-md   rounded-xl shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block   z-[1]" >
         <Image
           src={pic.url}
