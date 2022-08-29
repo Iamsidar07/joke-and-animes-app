@@ -15,12 +15,28 @@ export async function getServerSideProps() {
   };
 }
 
+const categories = [
+  "uniform",
+ " maid",
+"  waifu",
+  "marin-kitagawa",
+ " mori-calliope",
+ " raiden-shogun",
+"  oppai",
+  "selfies",
+"  ass",
+"hentai",
+"milf",
+"oral",
+"paizuri",
+"ecchi",
+"ero",
+];
 const Anime = ({ smile }) => {
   const [keywords, setKeywords] = useState("uniform");
   const [loading, setLoading] = useState(false);
   const [animes, setAnimes] = useState([]);
 
-  
   const getAnimes = (e) => {
     e.preventDefault();
     const getData = async function () {
@@ -33,10 +49,9 @@ const Anime = ({ smile }) => {
       setLoading(false);
     };
     getData();
-    
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     const getData = async function () {
       setLoading(true);
       const res = await fetch(
@@ -47,21 +62,37 @@ const Anime = ({ smile }) => {
       setLoading(false);
     };
     getData();
-  },[]);
-
+  }, []);
+  console.log({ animes });
 
   return (
-    <div className="p-3   md:py-10 ">
-    <Fade bottom>
-      <Search
-        funCall={getAnimes}
-        keywords={keywords}
-        setKeywords={setKeywords}
-      />
-
+    <div className="p-3  md:py-10 min-h-screen">
+      <Fade bottom>
+        <Search
+          funCall={getAnimes}
+          keywords={keywords}
+          setKeywords={setKeywords}
+        />
       </Fade>
-      {animes?.length!=0?<Animes animes={animes}/>:
-      <Loading/>}
+      {animes?.detail && (
+        <div className="max-w-sm mx-auto">
+          {" "}
+          <h2 className="text-center text-orange-400 text-2xl">
+            Oops! 🤭 {animes?.detail}. You can search 
+            <div className="flex max-w-sm  text-green-500 flex-wrap ">
+            {categories.map((category, i) => {
+              return (
+                <div key={i}>
+                    {category},
+                </div>
+              );
+            })}
+            </div>
+          </h2>
+        </div>
+      )}
+
+      {animes?.length != 0 ? <Animes animes={animes} /> : <Loading />}
     </div>
   );
 };

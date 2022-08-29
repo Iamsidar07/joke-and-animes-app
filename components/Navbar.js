@@ -25,12 +25,12 @@ const handleNavbar=()=>{
     setNavColor(false);
   }
 }
-console.log(navColor)
+
 
 
 
   return (
-    <nav className={`md:fixed  sticky top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/90 box-shadow md:block ":"block md:hidden"}  transition-all duration-250 ease-in z-[100] px-3 py-2` }>
+    <nav className={`md:fixed sticky top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/90 box-shadow md:block ":"hidden"}  transition-all duration-250 ease-in z-[20] px-3 py-2` }>
       <div className="max-w-7xl mx-auto">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">

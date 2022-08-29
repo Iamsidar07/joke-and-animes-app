@@ -6,7 +6,7 @@ const Search = ({ funCall, keywords, setKeywords }) => {
  
   return (
     <div>
-      <form className="w-[95%] md:w-[40%]  mx-auto my-5 mb-10" onSubmit={funCall}>
+      <form className="w-[99%] md:w-[40%]   mx-auto mt-10 mb-10" onSubmit={funCall}>
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
