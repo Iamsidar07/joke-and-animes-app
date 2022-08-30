@@ -75,11 +75,11 @@ const Anime = ({ smile }) => {
         />
       </Fade>
       {animes?.detail && (
-        <div className="max-w-sm mx-auto">
+        <div className=" mx-auto">
           {" "}
-          <h2 className="text-center text-orange-400 text-2xl">
+          <h2 className="text-center  text-2xl">
             Oops! 🤭 {animes?.detail}. You can search 
-            <div className="flex max-w-sm  text-green-500 flex-wrap ">
+            <div className="p-2 text-sm flex items-center justify-center flex-wrap ">
             {categories.map((category, i) => {
               return (
                 <div key={i}>

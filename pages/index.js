@@ -51,7 +51,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
       <div className="">
         {/* <CrushIntro loading={loading} pic={kiss} setLoading={setLoading} /> */}
         <div className="overflow-hidden  md:h-screen relative  flex items-center justify-center">  
-           <video src="video.mp4" autoPlay muted loop  className="w-[100vw] top-0 "></video>
+           <video src="v3.mp4" autoPlay muted loop  className="w-[100vw] top-0 "></video>
           <div className="text-4xl text-white absolute   md:text-8xl h-full flex flex-col items-center justify-center w-full pt-5 ">
              <h1 className="   p-2 rounded-xl">Search,
              <Link href={"/joke"}>
