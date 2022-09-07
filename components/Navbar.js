@@ -19,7 +19,7 @@ const Navbar = () => {
     window.addEventListener("scroll",handleNavbar);
   },[])
 const handleNavbar=()=>{
-  if(window.scrollY>=60) {
+  if(window.scrollY>=90) {
     setNavColor(true);
   }else{
     setNavColor(false);
@@ -60,14 +60,14 @@ const handleNavbar=()=>{
         </div>
 
         <ul
-          className={`  h-screen md:h-fit flex flex-col items-center jus md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
+          className={`  h-screen md:h-fit flex flex-col items-center  md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
             open ? " top-20 bg-white" : "top-[-490px] "
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.id}
-              className={` group whitespace-nowrap text-lg md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer ${navColor?"text-black":"text--500"}`}
+              className={` group whitespace-nowrap text-base md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer ${navColor?"text-black":"text--500"}`}
             >
               <Link href={link.link}>
                 <a >

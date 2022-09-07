@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Joke from "../components/Joke";
 import Search from "../components/Search";
-import Intro from "../components/Intro";
-import { Fade } from "react-reveal";
-import Loading from "../components/Loading"
+import Loading from "../components/Loading";
 
 export async function getServerSideProps() {
   const happy_res = await fetch("https://waifu.pics/api/sfw/happy");
@@ -23,7 +21,7 @@ const Jokes = ({ happy }) => {
 
   const getJokes = (e) => {
     e.preventDefault();
-   
+
     const getData = async function () {
       setLoading(true);
       const res = await fetch(
@@ -34,11 +32,9 @@ const Jokes = ({ happy }) => {
       setLoading(false);
     };
     getData();
-    
   };
 
   useEffect(() => {
-
     const getData = async function () {
       setLoading(true);
       const res = await fetch(
@@ -49,21 +45,15 @@ const Jokes = ({ happy }) => {
       setLoading(false);
     };
     getData();
-
   }, []);
 
-
   return (
-    <div className="p-3 md:py-10 ">
-      <Fade bottom>
+    <div  className="p-3 md:py-10 ">
       <Search
         funCall={getJokes}
         keywords={keywords}
         setKeywords={setKeywords}
       />
-
-     
-      </Fade>
       {jokes?.length != 0 ? (
         <>
           <h1 className="md:text-3xl font-bold text-gray-400 p-3">
@@ -71,9 +61,9 @@ const Jokes = ({ happy }) => {
           </h1>
           <Joke data={jokes} keywords={keywords} />
         </>
-      )
-      :
-      <Loading/>}
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };

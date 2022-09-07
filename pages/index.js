@@ -61,7 +61,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
           </div>
         </div>
        
-        <div className="flex items-center justify-center   flex-wrap min-h-screen py-4">
+        <div className="flex justify-between space-y-4 items-center py-4  flex-wrap min-h-screen">
         <Intro
             loading={loading}
             pic={kill}
