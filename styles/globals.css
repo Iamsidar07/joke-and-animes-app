@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,12 +12,15 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Spectral', serif;
 }
 .box-shadow{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .gradient{
     background-image: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgba(37,249,245,1) 0%, rgba(8,70,218,1) 90% );
+}
+.twitter-btn{
+    background-image:linear-gradient(315deg, rgb(42, 42, 114) 0%, rgb(0, 159, 253) 74%);
 }
 

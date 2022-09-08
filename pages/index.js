@@ -52,16 +52,16 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
         {/* <CrushIntro loading={loading} pic={kiss} setLoading={setLoading} /> */}
         <div className="overflow-hidden  md:h-screen relative  flex items-center justify-center">  
            <video src="v3.mp4" autoPlay muted loop  className="w-[100vw] top-0 "></video>
-          <div className="text-4xl text-white absolute   md:text-8xl h-full flex flex-col items-center justify-center w-full pt-5 ">
+          <div className="text-4xl  text-white absolute   md:text-8xl h-full flex flex-col items-center justify-center w-full pt-5 ">
              <h1 className="   p-2 rounded-xl">Search,
              <Link href={"/joke"}>
-             <a className="text-blue-500 cursor-pointer px-1 z-[11] ">Read </a>
+             <a className="italic underline text-blue-500 cursor-pointer px-3 z-[11] ">read </a>
              </Link>
-              and Laugh</h1>
+              and laugh</h1>
           </div>
         </div>
        
-        <div className="flex justify-between space-y-4 items-center py-4  flex-wrap min-h-screen">
+        <div className="flex justify-between space-y-4 items-center p-2  flex-wrap min-h-screen">
         <Intro
             loading={loading}
             pic={kill}

@@ -5,29 +5,29 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
 
   return (
     <div
-      className={`bg-white md:hover:shadow-lg box-shadow md:box-shadow max-w-md  md:max-w-xl mx-auto p-2  group  flex items-center   justify-content rounded   flex-col  `} >
-      <div className=" shadow-md   rounded shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block   z-[1]" >
+      className={` md:hover:shadow-lg box-shadow md:box-shadow max-w-md  md:max-w-xl mx-auto p-2  group  flex items-center   justify-content rounded-xl  flex-col  `} >
+      <div className=" rounded shadow-[rgba(0, 0, 0, 0.08) 0px 4px 12px;] overflow-auto w-full  md:block   z-[1]" >
         <Image
           src={pic.url}
           width={1920}
           height={1080}
           layout="responsive"
           objectFit="cover"
-          objectPosition={"top"}
+          objectPosition={"center top"}
           alt="Feature image"
           className=" md:hover:scale-125  transition-all duration-200 overflow-auto p-2 box-shadow"
         />
        
       </div>
-      <div className=" px-3  flex flex-col items-center justify-start   space-y-2 py-5">
-        <div className=" space-y-3 md:space-y-6 ">
-          <h1 className="text-xl text-transparent  bg-clip-text bg-gradient-to-r from-purple-800 to-pink-600 md:text-3xl font-bold  transition-colors duration-100 ease-in">
+      <div className=" py-3  flex flex-col items-center justify-start   space-y-2 ">
+        <div className=" space-y-4 ">
+          <h1 className="text-xl  md:text-3xl text-gray-400   transition-colors duration-100 ease-in">
             {title}
           </h1>
-          <div>
           <p className="lowercase text-base md:text-lg">{paragraph}</p>
+          <div>
           {isBtn && (
-            <button className="mt-6  w-full   flex  justify-center  rounded-full  bg-gradient-to-tr from-[#D4145A] to-[#FBB03B] transition-transform duration-75 ease-in  md:hover:bg-orange-500  text-white  py-3 px-8  md:inline-flex items-center">
+            <button className=" w-full md:w-fit  flex  justify-center   transition-transform duration-75 ease-in  md:hover:bg-black md:hover:text-white rounded-full md:bg-white md:text-black text-white bg-black  border-[1px] border-black  px-10 py-4  md:inline-flex items-center">
               <Link href={url}>
                 <a className="flex items-center ">
                   Get {category} 

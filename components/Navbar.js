@@ -79,9 +79,9 @@ const handleNavbar=()=>{
               </small>
             </li>
           ))}
-          <button className="text-white bg-blue-500 md:hover:bg-blue-600 md:hover:-translate-y-1 transition-all duration-75 ease-in  px-6 py-3  md:ml-2 mt-4 md:mt-0 rounded-full ">
+          <p className="text-white twitter-btn px-8 py-4 md:hover:-translate-y-1 transition-all duration-75 ease-in    md:ml-2 mt-4 md:mt-0 rounded-full ">
             <Link href={"https://twitter.com/iamsidar07"}>Follow 🕊️</Link>
-          </button>
+          </p>
         </ul>
       </div>
     </div>
