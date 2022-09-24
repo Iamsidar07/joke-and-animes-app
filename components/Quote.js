@@ -10,7 +10,7 @@ const Quote = ({ quotes }) => {
         quotes?.map((quote) => {
           return (
             <Fade key={quote?.quote} bottom>
-              <div className=" p-2 rounded-xl inline shadow-lg  group my-1 md:m-3  md:p-3 transition-transform duration-200 ease-in transform cursor-pointer md:hover:text-teal-500 ">
+              <div className=" p-2 rounded inline shadow-sm  group my-1 md:m-3  md:p-3 transition-transform duration-200 ease-in transform cursor-pointer md:hover:text-violet-500 ">
                 <h1 className=" text-3xl  my-2 ">
                   <small className=" text-xl  font-normal text-gray-400">
                     character-

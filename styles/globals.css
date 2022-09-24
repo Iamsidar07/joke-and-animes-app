@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +11,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Spectral', serif;
+    font-family: 'Comfortaa', cursive;
 }
 .box-shadow{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

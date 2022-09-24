@@ -30,8 +30,8 @@ const handleNavbar=()=>{
 
 
   return (
-    <nav className={`md:fixed sticky top-0 right-0 left-0 ${navColor?" bg-white md:bg-white/90 box-shadow md:block ":"hidden"}  transition-all duration-250 ease-in z-[20] px-3 py-2` }>
-      <div className="max-w-7xl mx-auto">
+    <nav className={`bg-violet-100 sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-2` }>
+      <div className="max-w-7xl mx-auto h-16">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
         <Link href={"/"}>
@@ -61,13 +61,13 @@ const handleNavbar=()=>{
 
         <ul
           className={`  h-screen md:h-fit flex flex-col items-center  md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
-            open ? " top-20 bg-white" : "top-[-490px] "
+            open ? " top-20 bg-violet-100" : "top-[-490px] "
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.id}
-              className={` group whitespace-nowrap text-base md:my-0 text-left p-3 md:hover:text-blue-500  rounded-full transition-all ease-in duration-100 cursor-pointer ${navColor?"text-black":"text--500"}`}
+              className={` group whitespace-nowrap text-base md:my-0 text-left p-3 md:hover:text-violet-500  rounded-full transition-all ease-in duration-100 cursor-pointer `}
             >
               <Link href={link.link}>
                 <a >
@@ -79,9 +79,12 @@ const handleNavbar=()=>{
               </small>
             </li>
           ))}
-          <p className="text-white twitter-btn px-8 py-4 md:hover:-translate-y-1 transition-all duration-75 ease-in    md:ml-2 mt-4 md:mt-0 rounded-full ">
-            <Link href={"https://twitter.com/iamsidar07"}>Follow 🕊️</Link>
-          </p>
+
+          <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
+           <button className="px-3 rounded-full py-2 md:py-3 border-none bg-green-800 text-white md:hover:bg-green-700 md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider w-full md:w-1/2">
+            FOLLOW 🐓
+           </button>
+           </Link>
         </ul>
       </div>
     </div>
