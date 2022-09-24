@@ -30,7 +30,7 @@ const handleNavbar=()=>{
 
 
   return (
-    <nav className={`bg-violet-100 sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-2` }>
+    <nav className={`bg-violet-100   sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-2` }>
       <div className="max-w-7xl mx-auto h-16">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
@@ -60,8 +60,8 @@ const handleNavbar=()=>{
         </div>
 
         <ul
-          className={`  h-screen md:h-fit flex flex-col items-center  md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
-            open ? " top-20 bg-violet-100" : "top-[-490px] "
+          className={`  h-[88vh] md:h-fit flex flex-col items-center  md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
+            open ? " top-20 bg-violet-100" : "top-[-76vh] "
           }`}
         >
           {Links.map((link) => (

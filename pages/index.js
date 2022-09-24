@@ -45,7 +45,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
 
   return (
     <div>
-      <section className="h-[calc(100vh-4rem)] w-full bg-violet-100   flex flex-col md:flex-row md:justify-center  ">
+      <section className="h-[calc(100vh-5rem)] w-full bg-violet-100   flex flex-col md:flex-row md:justify-center  ">
         <div className="h-full p-5 flex flex-col  md:justify-center justify-around tracking-widest space-y-10">
           <div className="space-y-2">
             <small className="underline underline-offset-8 text-violet-800">
