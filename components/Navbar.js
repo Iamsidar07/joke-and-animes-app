@@ -30,7 +30,7 @@ const handleNavbar=()=>{
 
 
   return (
-    <nav className={`bg-violet-100   sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-2` }>
+    <nav className={`bg-white shadow-xl  sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-2` }>
       <div className="max-w-7xl mx-auto md:p-2 2xl:h-24 2xl:p-5">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
@@ -61,7 +61,7 @@ const handleNavbar=()=>{
 
         <ul
           className={`  h-[88vh] md:h-fit flex flex-col items-center  md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
-            open ? " top-20 bg-violet-100" : "top-[-76vh] "
+            open ? " top-20 bg-white" : "top-[-76vh] "
           }`}
         >
           {Links.map((link) => (
@@ -81,7 +81,7 @@ const handleNavbar=()=>{
           ))}
 
           <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
-           <button className="px-3 w-1/3 rounded-full py-3 md:py-5 md:px-9 2xl:px-12 2xl:py-6 border-none shadow-lg bg-[#F3C756] text-white md:hover:bg-[#f3c756e5] md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider  md:w-1/2">
+           <button className="px-3 w-1/2 rounded-full py-3 md:py-5 md:px-9 2xl:px-12 2xl:py-6 border-none shadow-lg bg-[#F3C756] text-white md:hover:bg-[#f3c756e5] md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider  md:w-1/2">
             FOLLOW 🐓
            </button>
            </Link>

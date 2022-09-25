@@ -9,7 +9,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
         isLeft ? ":md:flex-row" : "md:flex-row-reverse"
       } mx-auto group  flex items-center  justify-between w-full px-2 md:p-12 flex-col-reverse md:flex-row mb-7 mt-7 md:m-0`}
     >
-      <div  className="bg-white border-b-2  p-2  md:p-5 w-full md:w-[45%]  flex flex-col items-center justify-start   space-y-2 ">
+      <div className="bg-white border-b-2  p-2  md:p-5 w-full md:w-[45%]  flex flex-col items-center justify-start   space-y-2 ">
         <div className=" space-y-4 ">
           <h1 className="text-3xl   md:text-5xl text-gray-700   transition-colors duration-100 ease-in">
             {title}
@@ -19,11 +19,11 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           </p>
           <div>
             {isBtn && (
-              <button className=" w-full px-8  py-3 md:py-6 2xl:py-8 2xl:px-16 md:w-fit  flex  justify-center   transition-transform duration-75 ease-in  md:hover:bg-black md:hover:text-white rounded-full md:bg-white md:text-black text-white bg-black  border-[1px] border-black md:px-12 md:inline-flex items-center">
-                <Link href={url}>
-                  <a className="flex items-center ">Get {category}</a>
-                </Link>
-              </button>
+              <Link href={url}>
+                <a className=" w-full px-8  py-3 md:py-6 2xl:py-8 2xl:px-16 md:w-fit  flex  justify-center   transition-transform duration-75 ease-in  md:hover:bg-black md:hover:text-white rounded-full md:bg-white md:text-black text-white bg-black  border-[1px] border-black md:px-12 md:inline-flex items-center ">
+                  Get {category}
+                </a>
+              </Link>
             )}
           </div>
         </div>

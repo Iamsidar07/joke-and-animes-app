@@ -45,17 +45,17 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
 
   return (
     <div>
-      <section className="h-[calc(100vh-5rem)] overflow-hidden w-full bg-violet-100   flex flex-col md:flex-row md:justify-center  ">
+      <section className="h-[calc(100vh-5rem)] overflow-hidden w-full bg-[#7860C8]   flex flex-col md:flex-row md:justify-center  ">
         <Fade left>
         <div className="h-full p-5 flex flex-col  md:justify-center justify-around tracking-widest space-y-10">
           <div className="space-y-2">
-            <small className="underline underline-offset-8 text-violet-800">
+            <small className="underline text-white underline-offset-8">
               WELCOME TO
             </small>
-            <h1 className="text-[#E0432E] text-6xl md:text-8xl 2xl:text-9xl font-bold font-['Rokkitt',serif]">
+            <h1 className="text-white text-6xl md:text-8xl 2xl:text-9xl font-bold font-['Rokkitt',serif]">
               Most Loved Place Ever{" "}
             </h1>
-            <p>A favorite destination for your anime, photos,quotes and memes.</p>
+            <p className="text-[#D7CEA5]">A favorite destination for your anime, photos,quotes and memes.</p>
           </div>
           <div className="space-x-2 flex">
           <Link href="/joke" target={"_blank"}>
@@ -63,12 +63,12 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
       backgroundImage: `url("btn-bg.jpg")` ,
       backgroundRepeat: "no-repeat",
     backgroundSize:" cover"
-    }} className="px-2 font-['Rokkitt',serif] shadow-lg py-3 md:py-6 2xl:py-8 border-none  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider w-full md:w-1/3">
+    }} className="px-2 font-['Rokkitt',serif]  shadow-lg py-3 md:py-6 2xl:py-8 border-none  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider w-full md:w-1/3">
               GRAB NOW
             </button>
           </Link>
           <Link href="https://www.linkedin.com/in/manoj-kumar-72aa54222/" target={"_blank"}>
-            <button className="px-1 font-['Rokkitt',serif] shadow-lg  py-3 md:py-4 border-none bg-[#0F3557] text-white md:hover:bg-[#015aa3d6] md:hover:-translate-y-2 transition-all duration-150 ease-in tracking-wider w-full md:w-1/3">
+            <button className="px-1 font-['Rokkitt',serif]  shadow-lg  py-3 md:py-4 border-none bg-[#0F3557] text-white md:hover:bg-[#015aa3d6] md:hover:-translate-y-2 transition-all duration-150 ease-in tracking-wider w-full md:w-1/3">
               Linked|IN
             </button>
           </Link>
@@ -76,9 +76,9 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
         </div>
         </Fade>
         <Fade right>
-        <div className=" relative hidden md:flex  md:w-[80%] 2xl:w-[40%] h-full">
+        <div className=" relative hidden md:flex  md:w-[80%] 2xl:w-[50%] h-full">
           <Image
-            src={"/hero-img.png"}
+            src={"/learning-boy.png"}
             layout="fill"
             objectFit="contain"
             alt="hero-img"
