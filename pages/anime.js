@@ -55,7 +55,7 @@ const Anime = ({ smile }) => {
     const getData = async function () {
       setLoading(true);
       const res = await fetch(
-        `https://api.waifu.im/random/?is_nsfw=null&selected_tags=${keywords}&many=true&full=false`
+        `https://api.waifu.im/search/?is_nsfw=null&included_tags={keywords}&many=true&full=false`
       );
       const data = await res.json();
       setAnimes(data);
@@ -63,7 +63,7 @@ const Anime = ({ smile }) => {
     };
     getData();
   }, []);
-  console.log({ animes });
+//   console.log({ animes });
 
   return (
     <div className="p-3  md:py-10 min-h-screen">
