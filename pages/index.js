@@ -44,101 +44,110 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
   const [loading, setLoading] = useState(false);
 
   return (
-    
+
     <div className=" ">
-      <section className="md:h-[calc(100vh-4rem)] h-[94vh] overflow-hidden bg-[#7860C8]   flex flex-col md:flex-row md:justify-center  ">
+      <section className="md:h-[calc(100vh-4rem)] h-[94vh] overflow-hidden max-w-7xl mx-auto ">
         <Fade bottom>
-        <div className="h-full p-5 flex flex-col text-center  items-center  md:justify-center justify-around tracking-widest space-y-16">
-          <div className="space-y-2">
-            <h1 className="text-white text-2xl text-center md:text-8xl 2xl:text-9xl font-bold ">
-              Easily access free
-            </h1>
-            <h1 className="text-white text-xl text-center md:text-8xl 2xl:text-9xl font-bold ">
-               Jokes,memes
-            </h1>
-           
+          <div className="h-full p-5 flex flex-col-reverse md:flex-row   items-center  md:justify-between justify-evenly ">
+            <div className="w-full text-center md:text-left">
+              <div className="space-y-4">
+                <h1 className=" text-4xl  md:text-6xl  font-bold leading-10 tracking-wide font-['Montserrat', sans-serif]  ">
+                  Laugh Out Loud: the <span className="text-[#0082FF]">ultimate</span> joke
+              </h1>
+                <h1 className="  md:text-lg leading-5 ">
+                  Enter the World of Anime: A Guide to Your Favorite Characters. Our website is dedicated to bringing you the latest and greatest jokes from around the world, guaranteed to put a smile on your face. 
+              </h1>
+
+              </div>
+              <Link href="/joke" target={"_blank"}>
+                <button className="px-[12%]  shadow-lg py-3 md:py-4   border-none  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider  rounded-xl bg-[#0082FF] text-white font-bold animate-bounce mt-12 font-['Poppins', sans-serif]">
+                  Get Started
+                </button>
+              </Link>
+            </div>
+
+            <Image
+              src={"/intro2.gif"}
+              objectFit="cover"
+              alt="logo"
+              width={980}
+              height={720}
+            />
           </div>
-            <Link href="/joke" target={"_blank"}>
-              <button className="px-10  shadow-lg py-3 md:py-4  border-none  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider  rounded-full bg-white font-bold animate-bounce ">
-                Get Started
-              </button>
-            </Link>
-          
-        </div>
         </Fade>
-       
+
       </section>
 
       <div className="max-w-7xl mx-auto w-full">
         <Fade bottom>
-        <Intro
-          loading={loading}
-          pic={kill}
-          setLoading={setLoading}
-          title={"Animes quotes"}
-          paragraph={
-            "get quotes of your favourite Animes Character's Quote Like Ergo Proxy,Haruhi Suzumiya,Basara Tōjō etc."
-          }
-          isLeft={true}
-          url="/quotes"
-          category={"Quotes"}
-          isBtn={true}
-          bg={"#FFDEDE"}
-        />
+          <Intro
+            loading={loading}
+            pic={kill}
+            setLoading={setLoading}
+            title={"Animes quotes"}
+            paragraph={
+              "get quotes of your favourite Animes Character's Quote Like Ergo Proxy,Haruhi Suzumiya,Basara Tōjō etc."
+            }
+            isLeft={true}
+            url="/quotes"
+            category={"Quotes"}
+            isBtn={true}
+            bg={"#FFDEDE"}
+          />
         </Fade>
         <Fade left>
-        <Intro
-          loading={loading}
-          pic={smile}
-          setLoading={setLoading}
-          title={"Anime Collections"}
-          paragraph={
-            "Get Your Favourite Animes from various categories Like smile,selfie,milf,assetc."
-          }
-          isLeft={false}
-          url="/anime"
-          category={"Anime's"}
-          isBtn={true}
-          bg="#59CE8F"
-        />
+          <Intro
+            loading={loading}
+            pic={smile}
+            setLoading={setLoading}
+            title={"Anime collections"}
+            paragraph={
+              "Get Your Favourite Animes from various categories Like smile,selfie,milf,assetc."
+            }
+            isLeft={false}
+            url="/anime"
+            category={"Anime's"}
+            isBtn={true}
+            bg="#59CE8F"
+          />
         </Fade>
 
 
         <Fade bottom>
-        <Intro
-          loading={loading}
-          pic={happy}
-          setLoading={setLoading}
-          title={"Funny Jokes"}
-          paragraph={
-            "Get Your Favourite Jokes from various categories Like Sex,Political,nsfw,etc."
-          }
-          isLeft={true}
-          url="/joke"
-          category={"Jokes"}
-          isBtn={true}
-          bg="#ABC9FF"
-        />
+          <Intro
+            loading={loading}
+            pic={happy}
+            setLoading={setLoading}
+            title={"Funny jokes"}
+            paragraph={
+              "Get Your Favourite Jokes from various categories Like Sex,Political,nsfw,etc."
+            }
+            isLeft={true}
+            url="/joke"
+            category={"Jokes"}
+            isBtn={true}
+            bg="#ABC9FF"
+          />
         </Fade>
 
-       <Fade bottom>
-       <Intro
-          loading={loading}
-          pic={meme}
-          setLoading={setLoading}
-          title={"Favourite Memes "}
-          paragraph={
-            "Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."
-          }
-          isLeft={false}
-          url="/meme"
-          category={"Memes"}
-          isBtn={true}
-          bg="#EAF6F6"
-        />
+        <Fade bottom>
+          <Intro
+            loading={loading}
+            pic={meme}
+            setLoading={setLoading}
+            title={"Favourite memes "}
+            paragraph={
+              "Get Your Favourite Memes from here from various categories Like Chuck Noris,Sexist,Christmas,etc."
+            }
+            isLeft={false}
+            url="/meme"
+            category={"Memes"}
+            isBtn={true}
+            bg="#EAF6F6"
+          />
 
-       </Fade>
-       
+        </Fade>
+
       </div>
     </div>
   );

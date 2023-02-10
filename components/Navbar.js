@@ -30,7 +30,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`bg-white shadow-xl  sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-1`}>
+    <nav className={`bg-white shadow  sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-1`}>
       <div className="max-w-7xl mx-auto md:p-2 ">
         <div className="flex  items-center justify-between   md:px-10 ">
           <div className="z-[50]">
@@ -81,7 +81,7 @@ const Navbar = () => {
             ))}
 
             <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
-              <button className="px-5  rounded-full py-2   border-none shadow-lg bg-[#7860C8] text-white md:hover:bg-[#6b58a9] md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider ">
+              <button className="px-5  rounded-full py-2   border-none shadow-lg  bg-[#0082FF] text-white md:hover:bg-[#0084ffd6]  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider ">
                 follow🐓
               </button>
             </Link>

@@ -49,7 +49,7 @@ const Search = ({ funCall, keywords, setKeywords }) => {
           <button
             onClick={funCall}
             type="submit"
-            className="text-white  absolute right-2.5 bottom-2.5  bg-gradient-to-tr from-[#D4145A] to-[#FBB03B]  text-sm px-4 py-2 "
+            className="text-white rounded-full  absolute right-2.5 bottom-2.5  bg-gradient-to-tr from-[#2b78f4] to-[#2f76fa]  text-sm px-4 py-2 "
           >
             Search
           </button>

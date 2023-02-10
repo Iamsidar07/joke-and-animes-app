@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Space Grotesk', sans-serif;
     
 }
 html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: "#F6F8FF";
+    /* background-color: "#F6F8FF"; */
+    font-family: 'Montserrat', sans-serif;
 }
 .box-shadow{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

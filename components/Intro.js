@@ -20,7 +20,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           <div>
             {isBtn && (
               <Link href={url}>
-                <a className=" w-full px-8  py-3  md:w-fit  flex  justify-center   transition-transform duration-75 ease-in  md:hover:bg-white  rounded md:hover:text-black  text-white bg-black  border-[1px] border-black md:px-9 md:inline-flex items-center ">
+                <a className=" w-full px-8  py-3  md:w-fit  flex  justify-center   transition-transform duration-75 ease-in   rounded-lg md:hover:bg-[#0084ffdb]  text-white bg-[#0082FF]  md:px-9 md:inline-flex items-center ">
                   Get {category}
                 </a>
               </Link>
@@ -29,16 +29,16 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
         </div>
       </div>
 
-      <div className="md:w-1/2 h-full   rounded shadow-xl overflow-auto w-full  md:block   z-[1]">
+      <div className="md:w-1/2 h-full rounded-lg overflow-auto w-full  md:block   z-[1]">
         <Image
           src={pic.url}
           width={1920}
-          height={1080}
+          height={1180}
           layout="responsive"
-          objectFit="cover"
+          objectFit="contain"
           objectPosition={"center top"}
           alt="Feature image"
-          className=" md:hover:scale-125  transition-all duration-200 overflow-auto p-2 box-shadow"
+          className=" md:hover:scale-125 rounded-lg  transition-all duration-200 overflow-auto p-2"
         />
       </div>
     </div>

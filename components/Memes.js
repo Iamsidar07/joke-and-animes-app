@@ -27,7 +27,7 @@ const Memes = ({memes}) => {
               height={1080}
               customClassName={"rounded-xl"}
             />
-            <p className='relative bottom-0 md:-bottom-10 md:absolute   md:group-hover:bottom-10  md:ml-2 md:opacity-0 py-2 md:p-2 rounded-xl bg-none md:group-hover:-translate-y-5 md:group-hover:opacity-100 h-fit  md:bg-white duration-100 ease-in transition-all'>{name}</p>
+            <p className='relative bottom-0 md:-bottom-10 md:absolute   md:group-hover:bottom-10  md:ml-2 md:opacity-0 py-2 md:p-2  md:group-hover:-translate-y-5 md:group-hover:opacity-100 h-fit  bg-[#0082FF] text-white duration-100 ease-in transition-all'>{name}</p>
         </div>
 
         )

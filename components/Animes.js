@@ -13,7 +13,7 @@ const Animes = ({ animes,setKeywords }) => {
                 url={url}
                 layout="responsive"
                 width={width}
-                height={height/2}
+                height={height/2+50}
                 objectFit="contain"
                 objectPosition={"top"}
                 customClassName={
