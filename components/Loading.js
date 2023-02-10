@@ -9,7 +9,7 @@ const Loading = () => {
        {/* <div className="w-44 h-44 relative">
        </div> */}
       <Image
-        src={"/loader.gif"}
+        src={"/loader2.gif"}
         objectFit="contain"
         alt="logo"
         className="rounded-xl"

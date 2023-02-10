@@ -50,10 +50,10 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
         <Fade bottom>
         <div className="h-full p-5 flex flex-col text-center  items-center  md:justify-center justify-around tracking-widest space-y-16">
           <div className="space-y-2">
-            <h1 className="text-white text-xl text-center md:text-8xl 2xl:text-9xl font-bold ">
+            <h1 className="text-white text-2xl text-center md:text-8xl 2xl:text-9xl font-bold ">
               Easily access free
             </h1>
-            <h1 className="text-white text-lg text-center md:text-8xl 2xl:text-9xl font-bold ">
+            <h1 className="text-white text-xl text-center md:text-8xl 2xl:text-9xl font-bold ">
                Jokes,memes
             </h1>
            

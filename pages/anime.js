@@ -77,12 +77,12 @@ const Anime = ({ smile }) => {
       </Fade>
       {animes?.detail && (
         <div className=" mx-auto max-w-2xl text-center">
-          <Image src={"/not-found.png"}
+          <Image src={"/oops.gif"}
             objectFit="contain"
             alt="logo"
             className="rounded-xl animate-pulse"
-            width={300}
-            height={300}
+            width={320}
+            height={320}
           />
           <h2 className="text-center  text-lg">
             Oops! 🤭 {animes?.detail}. You can search
