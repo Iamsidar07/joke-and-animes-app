@@ -40,7 +40,7 @@ export async function getServerSideProps() {
 
 export default function Home({ kiss, happy, kill, meme, smile }) {
   const value = useContext(MyContextProvider);
-  console.log(value);
+
   const [loading, setLoading] = useState(false);
 
   return (

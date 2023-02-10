@@ -45,7 +45,6 @@ const Meme = ({ meme }) => {
     getData();
   }, []);
 
-  console.log(loading);
 
   return (
     <div className="p-3  md:py-10   mx-auto">

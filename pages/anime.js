@@ -63,7 +63,7 @@ const Anime = ({ smile }) => {
       setLoading(false);
     };
     getData();
-  }, []);
+  }, [keywords]);
 
 
   return (
@@ -80,7 +80,7 @@ const Anime = ({ smile }) => {
           <Image src={"/not-found.png"}
             objectFit="contain"
             alt="logo"
-            className="rounded-xl"
+            className="rounded-xl animate-pulse"
             width={300}
             height={300}
           />
