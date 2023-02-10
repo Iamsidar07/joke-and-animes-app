@@ -15,7 +15,7 @@ export async function getServerSideProps() {
 }
 
 const Jokes = ({ happy }) => {
-  const [keywords, setKeywords] = useState("Political");
+  const [keywords, setKeywords] = useState("dad");
   const [jokes, setJokes] = useState([]);
   const [loading, setLoading] = useState(false);
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Fade } from "react-reveal";
 import CustomImage from "./CustomImage";
-const Animes = ({ animes }) => {
+const Animes = ({ animes,setKeywords }) => {
   return (
     <div className=" w-full mx-auto gap-2 max-w-full  grid grid-cols-1 sm:gap-2 md:grid-cols-3 sm:grid-cols-2  md:gap-3 2xl:grid-cols-4  ">
       {animes.images?.map(({ url, width, height, image_id, tags }) => {
@@ -12,9 +12,9 @@ const Animes = ({ animes }) => {
               <CustomImage
                 url={url}
                 layout="responsive"
-                width={1920}
-                height={1580}
-                objectFit="cover"
+                width={width}
+                height={height/2}
+                objectFit="contain"
                 objectPosition={"top"}
                 customClassName={
                   typeof url == undefined
@@ -31,6 +31,7 @@ const Animes = ({ animes }) => {
                     <span
                       key={tag_id}
                       className="inline-block border-2 border-teal-500 text-teal-500 rounded-full px-3 py-1 text-sm mr-1 mb-1"
+                      onClick={()=>setKeywords(name)}
                     >
                       <p>@{name}</p>
                     </span>

@@ -30,38 +30,38 @@ const handleNavbar=()=>{
 
 
   return (
-    <nav className={`bg-white shadow-xl  sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-2` }>
-      <div className="max-w-7xl mx-auto md:p-2 2xl:h-24 2xl:p-5">
+    <nav className={`bg-white shadow-xl  sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] px-3 py-1` }>
+      <div className="max-w-7xl mx-auto md:p-2 ">
       <div className="flex  items-center justify-between   md:px-10 ">
         <div className="z-[50]">
         <Link href={"/"}>
-        <div className="w-16 h-16 relative cursor-pointer">
+
         <Image
-            src={"https://iconape.com/wp-content/files/vc/201433/png/201433.png"}
-            layout="fill"
-            objectFit="contain"
-            priority
-            alt="Logo"
+            src={"/logo.png"}
+                  objectFit="cover"
+                  alt="logo"
+                  width={200}
+                  height={40}
+
            />
-        </div>
           
         </Link>
         <div
           onClick={() => setOpen(!open)}
-          className=" text-2xl absolute right-6 top-6 cursor-pointer md:hidden"
+          className=" text-2xl absolute right-2 top-2 cursor-pointer md:hidden"
         >
           <Image
             src={open?"/cross.svg":"/menu.svg"}
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             alt="menu"
           />
         </div>
         </div>
 
         <ul
-          className={`  h-[88vh] md:h-fit flex flex-col items-center  md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] left-0 w-full md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
-            open ? " top-20 bg-white" : "top-[-76vh] "
+          className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[80%] md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${
+              open ? " top-12 bg-white  h-[95vh] " : "top-[-76vh] "
           }`}
         >
           {Links.map((link) => (
@@ -81,8 +81,8 @@ const handleNavbar=()=>{
           ))}
 
           <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
-           <button className="px-3 w-1/2 rounded-full py-3 md:py-5 md:px-9 2xl:px-12 2xl:py-6 border-none shadow-lg bg-[#F3C756] text-white md:hover:bg-[#f3c756e5] md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider  md:w-1/2">
-            FOLLOW 🐓
+              <button className="px-5  rounded-full py-2   border-none shadow-lg bg-[#7860C8] text-white md:hover:bg-[#6b58a9] md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider ">
+            follow🐓
            </button>
            </Link>
         </ul>

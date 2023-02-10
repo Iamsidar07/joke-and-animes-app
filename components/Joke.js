@@ -3,7 +3,7 @@ import { Fade } from 'react-reveal'
 const Joke = ({data,keywords}) => {
   
   return (
-    <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:p-3 '>
+    <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:p-3 2xl:grid-cols-4'>
       {data?.map(({value,icon_url,id})=>{
         return <Fade bottom key={id}>
         <div className='p-2  md:m-3 group shadow-sm rounded group m-1 md:p-3 md:hover:text-teal-600 md:hover:shadow-2xl  transition-all duration-200 ease-in transform cursor-pointer' >

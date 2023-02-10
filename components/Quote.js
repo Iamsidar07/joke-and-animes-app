@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 
 const Quote = ({ quotes }) => {
   return (
-    <div className="inline-grid  rounded-3xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3  md:p-3 ">
+    <div className="inline-grid  rounded-3xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3  md:p-3 2xl:grid-cols-4 ">
       {quotes?.length == 0 ? (
         <p>Loading</p>
       ) : (

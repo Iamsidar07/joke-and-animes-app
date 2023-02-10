@@ -30,10 +30,14 @@ const Quotes = ({ kill, quotes }) => {
     const getData = async function () {
       setLoading(true);
       
-      const res = await fetch("https://animechan.vercel.app/api/quotes");
-      const data = await res.json();
-      setQuotesData(data);
-      setLoading(false);
+      try {
+        const res = await fetch("https://animechan.vercel.app/api/quotes");
+        const data = await res.json();
+        setQuotesData(data);
+        setLoading(false);
+      } catch (error) {
+        setQuotesData(null)
+      }
     };
     getData();
   };

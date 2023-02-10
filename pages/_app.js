@@ -8,8 +8,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <MyContextProvider>
       <Head>
-        <title>Anime & Jokes</title>
-        <meta name="description" content="Most Loved Place Ever|A favorite destination for your anime, photos,quotes and memes." />
+        <title>Jokeshub</title>
+        <meta name="description" content="Easily access free
+Jokes,memes" />
         <link
           rel="icon"
           href="https://iconape.com/wp-content/files/vc/201433/png/201433.png"

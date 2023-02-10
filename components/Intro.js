@@ -11,16 +11,16 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
     >
       <div className="bg-white border-b-2  p-2  md:p-5 w-full md:w-[45%]  flex flex-col items-center justify-start   space-y-2 ">
         <div className=" space-y-4 ">
-          <h1 className="text-3xl   md:text-5xl text-gray-700   transition-colors duration-100 ease-in">
+          <h1 className="text-lg font-bold  md:text-3xl text-gray-700   transition-colors duration-100 ease-in">
             {title}
           </h1>
-          <p className="lowercase text-xl text-gray-400 md:text-2xl">
+          <p className="lowercase  text-gray-400 md:text-lg">
             {paragraph}
           </p>
           <div>
             {isBtn && (
               <Link href={url}>
-                <a className=" w-full px-8  py-3 md:py-6 2xl:py-8 2xl:px-16 md:w-fit  flex  justify-center   transition-transform duration-75 ease-in  md:hover:bg-black md:hover:text-white rounded-full md:bg-white md:text-black text-white bg-black  border-[1px] border-black md:px-12 md:inline-flex items-center ">
+                <a className=" w-full px-8  py-3  md:w-fit  flex  justify-center   transition-transform duration-75 ease-in  md:hover:bg-white  rounded md:hover:text-black  text-white bg-black  border-[1px] border-black md:px-9 md:inline-flex items-center ">
                   Get {category}
                 </a>
               </Link>

@@ -14,7 +14,7 @@ const Memes = ({memes}) => {
   }
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2  md:gap-1 md:grid-cols-3 '>
+    <div className='grid grid-cols-1 sm:grid-cols-2  md:gap-1 md:grid-cols-3 2xl:grid-cols-4 '>
      <Fade bottom>
       {topMemes?.map(({url,id,name})=>{
         return (
