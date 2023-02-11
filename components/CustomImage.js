@@ -7,19 +7,21 @@ const CustomImage = ({url,width,height,layout,objectFit,objectPosition,customCla
     <Image
       src={
         load
-          ? "https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg"
+          ? "/placeholder.gif"
           : url
       }
       layout={layout}
-      objectFit={"cover"}
+      objectFit={load?"contain":"cover"}
       width={width}//1920
       height={height}//1780
       priority
-      objectPosition={objectPosition}
-      onLoad={() => setLoad(false)}
+      objectPosition={load?"center center":objectPosition}
+      onLoadingComplete={() => setLoad(false)}
       className={load?"animate-pulse":customClassName}
     />
   );
 };
 
 export default CustomImage;
+
+// https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg

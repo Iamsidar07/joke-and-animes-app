@@ -61,13 +61,13 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100 border-t-2 md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[80%] md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${open ? " top-12 bg-white  h-[95vh] " : "top-[-76vh] "
+            className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100  md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[80%] md:w-auto md:pl-0  text-center transition-all duration-250 ease-in ${open ? " top-12 bg-white  h-[95vh] " : "top-[-76vh] "
               }`}
           >
             {Links.map((link) => (
               <li
                 key={link.id}
-                className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-violet-500  rounded-full transition-all ease-in duration-100 cursor-pointer `}
+                className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
               >
                 <Link href={link.link}>
                   <a >

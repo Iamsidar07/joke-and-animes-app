@@ -36,7 +36,9 @@ const Quotes = ({ kill, quotes }) => {
         setQuotesData(data);
         setLoading(false);
       } catch (error) {
-        setQuotesData(null)
+        setQuotesData(null);
+        console.error(error)
+        setLoading(false);
       }
     };
     getData();
@@ -45,11 +47,16 @@ const Quotes = ({ kill, quotes }) => {
   useEffect(() => {
     const getData = async function () {
       setLoading(true);
-      
-      const res = await fetch("https://animechan.vercel.app/api/quotes");
-      const data = await res.json();
-      setQuotesData(data);
-      setLoading(false);
+      try {
+        const res = await fetch("https://animechan.vercel.app/api/quotes");
+        const data = await res.json();
+        setQuotesData(data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   }, []);

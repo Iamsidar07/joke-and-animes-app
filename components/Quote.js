@@ -4,13 +4,14 @@ import { Fade } from "react-reveal";
 import copyToClipboard from "./copyToClipboard";
 
 const Quote = ({ quotes }) => {
-  const [isCopied, setIsCopied] = useState(false);
+  const [isCopied, setIsCopied] = useState(-1);
   return (
     <div className="inline-grid  rounded-3xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3  md:p-3 2xl:grid-cols-4 ">
       {quotes?.length == 0 ? (
         <p>Loading</p>
       ) : (
         quotes?.map((quote) => {
+          
           return (
             <Fade key={quote?.quote} bottom>
               <div className=" p-2 rounded inline  shadow-sm  group my-1 md:m-3  md:p-3 transition-all duration-150 ease-in transform cursor-pointer md:hover:text-violet-500 md:hover:shadow-2xl  ">
@@ -25,16 +26,16 @@ const Quote = ({ quotes }) => {
                   <small className="text-gray-400  ">Anime-</small>
                   {quote?.anime}
                 </p>
-                <div className='absolute bottom-0 right-2 opacity-0 group-hover:opacity-100 ' onClick={() => {
+                <div className='absolute bottom-0 right-2  ' onClick={() => {
                   copyToClipboard("Character" + quote?.character + ". " + quote?.quote + " Anime" + quote?.anime);
-                  setIsCopied(true);
+                  setIsCopied(quote);
                   setTimeout(() => setIsCopied(false), 1000);
                 }}>
-                  {isCopied && <small className='relative bottom-2 right-3 text-black font-bold '>copied</small>}
+                  {isCopied===quote && <small className='relative bottom-1 right-2 text-black font-bold '>copied</small>}
                   <Image
                     src={"/copy.png"}
-                    width={20}
-                    height={20}
+                    width={15}
+                    height={15}
                     objectFit="contain"
                   />
                 </div>

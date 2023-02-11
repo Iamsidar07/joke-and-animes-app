@@ -42,12 +42,19 @@ const Anime = ({ smile }) => {
     e.preventDefault();
     const getData = async function () {
       setLoading(true);
-      const res = await fetch(
-        `https://api.waifu.im/search/?is_nsfw=null&included_tags=${keywords}&many=true&full=false`
-      );
-      const data = await res.json();
-      setAnimes(data);
-      setLoading(false);
+      try {
+        const res = await fetch(
+          `https://api.waifu.im/search/?is_nsfw=null&included_tags=${keywords}&many=true&full=false`
+        );
+        const data = await res.json();
+        setAnimes(data);
+        setLoading(false);
+       
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   };
@@ -55,12 +62,18 @@ const Anime = ({ smile }) => {
   useEffect(() => {
     const getData = async function () {
       setLoading(true);
-      const res = await fetch(
-        `https://api.waifu.im/search/?is_nsfw=null&included_tags=${keywords}&many=true&full=false`
-      );
-      const data = await res.json();
-      setAnimes(data);
-      setLoading(false);
+      try {
+        const res = await fetch(
+          `https://api.waifu.im/search/?is_nsfw=null&included_tags=${keywords}&many=true&full=false`
+        );
+        const data = await res.json();
+        setAnimes(data);
+        setLoading(false);
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   }, [keywords]);

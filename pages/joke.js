@@ -24,12 +24,18 @@ const Jokes = ({ happy }) => {
 
     const getData = async function () {
       setLoading(true);
-      const res = await fetch(
-        `https://api.chucknorris.io/jokes/search?query=${keywords}`
-      );
-      const data = await res.json();
-      setJokes(data.result);
-      setLoading(false);
+      try {
+        const res = await fetch(
+          `https://api.chucknorris.io/jokes/search?query=${keywords}`
+        );
+        const data = await res.json();
+        setJokes(data.result);
+        setLoading(false);
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   };
@@ -37,12 +43,18 @@ const Jokes = ({ happy }) => {
   useEffect(() => {
     const getData = async function () {
       setLoading(true);
-      const res = await fetch(
-        `https://api.chucknorris.io/jokes/search?query=${keywords}`
-      );
-      const data = await res.json();
-      setJokes(data.result);
-      setLoading(false);
+      try {
+        const res = await fetch(
+          `https://api.chucknorris.io/jokes/search?query=${keywords}`
+        );
+        const data = await res.json();
+        setJokes(data.result);
+        setLoading(false);
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   }, []);

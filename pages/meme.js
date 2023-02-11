@@ -26,10 +26,16 @@ const Meme = ({ meme }) => {
     e.preventDefault();
     const getData = async function () {
       setLoading(true);
-      const res = await fetch("https://api.imgflip.com/get_memes");
-      const data = await res.json();
-      setMemes(data.data.memes);
-      setLoading(false);
+      try {
+        const res = await fetch("https://api.imgflip.com/get_memes");
+        const data = await res.json();
+        setMemes(data.data.memes);
+        setLoading(false);
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   };
@@ -37,10 +43,16 @@ const Meme = ({ meme }) => {
   useEffect(() => {
     const getData = async function () {
       setLoading(true);
-      const res = await fetch("https://api.imgflip.com/get_memes");
-      const data = await res.json();
-      setMemes(data.data.memes);
-      setLoading(false);
+      try {
+        const res = await fetch("https://api.imgflip.com/get_memes");
+        const data = await res.json();
+        setMemes(data.data.memes);
+        setLoading(false);
+      } catch (error) {
+        console.error(error)
+        setLoading(false);
+      }
+
     };
     getData();
   }, []);
