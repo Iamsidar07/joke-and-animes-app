@@ -55,7 +55,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
                   Laugh Out Loud: the <span className="text-[#0082FF]">ultimate</span> joke
               </h1>
                 <h1 className=" text-sm md:text-lg md:max-w-lg leading-5 ">
-                  Enter the World of Anime: A Guide to Your Favorite Characters.This is is dedicated to bringing you the latest and greatest jokes from around the world, guaranteed to put a smile on your face. 
+                  Enter the World of Anime: A Guide to Your Favorite Characters.Our website is dedicated to bringing you the latest and greatest jokes from around the world, guaranteed to put a smile on your face. 
               </h1>
 
               </div>
