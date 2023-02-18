@@ -54,8 +54,8 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
                 <h1 className=" text-4xl  md:text-6xl  font-bold leading-10 tracking-wide font-['Montserrat', sans-serif]  ">
                   Laugh Out Loud: the <span className="text-[#0082FF]">ultimate</span> joke
               </h1>
-                <h1 className="  md:text-lg leading-5 ">
-                  Enter the World of Anime: A Guide to Your Favorite Characters. Our website is dedicated to bringing you the latest and greatest jokes from around the world, guaranteed to put a smile on your face. 
+                <h1 className=" text-sm md:text-lg md:max-w-lg leading-5 ">
+                  Enter the World of Anime: A Guide to Your Favorite Characters.This is is dedicated to bringing you the latest and greatest jokes from around the world, guaranteed to put a smile on your face. 
               </h1>
 
               </div>
@@ -70,8 +70,8 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
               src={"/intro2.gif"}
               objectFit="cover"
               alt="logo"
-              width={980}
-              height={720}
+              width={1080}
+              height={820}
             />
           </div>
         </Fade>

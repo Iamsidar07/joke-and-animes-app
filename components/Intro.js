@@ -9,7 +9,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
         isLeft ? ":md:flex-row" : "md:flex-row-reverse"
       } mx-auto group  flex items-center  justify-between w-full px-2 md:p-12 flex-col-reverse md:flex-row mb-7 mt-7 md:m-0`}
     >
-      <div className="bg-white border-b-2  p-2  md:p-5 w-full md:w-[45%]  flex flex-col items-center justify-start   space-y-2 ">
+      <div className="bg-white   p-2  md:p-5 w-full md:w-[45%]  flex flex-col items-center justify-start   space-y-2 ">
         <div className=" space-y-4 ">
           <h1 className="text-lg font-bold  md:text-3xl text-gray-700   transition-colors duration-100 ease-in">
             {title}

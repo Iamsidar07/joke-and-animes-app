@@ -68,7 +68,7 @@ const Jokes = ({ happy }) => {
       />
       {jokes?.length != 0 ? (
         <>
-          <h1 className="md:text-3xl font-bold text-gray-400 p-3">
+          <h1 className="md:text-xl text-lg font-bold text-gray-400 p-3">
             Showing {keywords} Jokes results{" "}
           </h1>
           <Joke data={jokes} keywords={keywords} />

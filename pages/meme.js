@@ -71,7 +71,7 @@ const Meme = ({ meme }) => {
 
       {memes?.length != 0 ? (
         <>
-          <h1 className="md:text-3xl text-2xl font-bold text-gray-400 p-3">
+          <h1 className="md:text-xl text-lg font-bold text-gray-400 p-3">
             Showing {keywords} Memes results{" "}
           </h1>
           <Memes memes={memes} />
