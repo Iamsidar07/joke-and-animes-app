@@ -7,7 +7,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
     <div
       className={`  box-shadow  md:shadow-none h-fit  ${
         isLeft ? ":md:flex-row" : "md:flex-row-reverse"
-      } mx-auto group  flex items-center  justify-between w-full px-2 md:p-12 flex-col-reverse md:flex-row mb-7 mt-7 md:m-0`}
+      } mx-auto group  flex items-center  justify-between w-full px-2  flex-col-reverse md:flex-row my-7  md:min-h-[80vh]`}
     >
       <div className="bg-white   p-2  md:p-5 w-full md:w-[45%]  flex flex-col items-center justify-start   space-y-2 ">
         <div className=" space-y-4 ">
@@ -35,7 +35,7 @@ const Intro = ({ pic, title, paragraph, isLeft, url, category, isBtn }) => {
           width={1920}
           height={1180}
           layout="responsive"
-          objectFit="contain"
+          objectFit="cover"
           objectPosition={"center top"}
           alt="Feature image"
           className=" md:hover:scale-125 rounded-lg  transition-all duration-200 overflow-auto p-2"

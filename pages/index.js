@@ -100,7 +100,7 @@ export default function Home({ kiss, happy, kill, meme, smile }) {
             loading={loading}
             pic={smile}
             setLoading={setLoading}
-            title={"Anime collections"}
+            title={"⚠️18+ Anime collections"}
             paragraph={
               "Get Your Favourite Animes from various categories Like smile,selfie,milf,assetc."
             }
